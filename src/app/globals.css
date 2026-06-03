@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+/* Disable dark mode — all dark: utilities are permanently turned off */
+@custom-variant dark (&:not(*));
+
+@theme {
+  --color-brand-blue: #0b2545;
+  --color-brand-light-blue: #134074;
+  --color-brand-steel: #8da9c4;
+  --color-brand-orange: #f26419;
+  --color-brand-orange-light: #f68e56;
+  --color-brand-dark: #0a0f18;
+  --color-brand-gray: #f4f6f9;
+  --color-brand-dark-gray: #1e293b;
+  
+  --font-sans: var(--font-geist-sans), Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), monospace;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Focus utilities for WCAG compliance */
+*:focus-visible {
+  outline: 2px solid #f26419;
+  outline-offset: 2px;
+}
+
+/* Glassmorphism utility */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+
+/* Masonry grid fallback */
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+@media (min-width: 640px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}

@@ -1,0 +1,63 @@
+"use client";
+
+import React from "react";
+import { Cpu, ShieldCheck, Users, Leaf, LucideIcon } from "lucide-react";
+import { companyConfig } from "@/data/company";
+
+const iconMap: Record<string, LucideIcon> = {
+  Cpu,
+  ShieldCheck,
+  Users,
+  Leaf,
+};
+
+export default function WhyChooseUs() {
+  return (
+    <section className="py-20 lg:py-28 bg-brand-dark text-white relative overflow-hidden">
+      {/* Decorative Background Accents */}
+      <div className="absolute top-0 left-0 w-80 h-80 bg-[radial-gradient(circle_at_top_left,#f2641910,transparent)]" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_bottom_right,#13407420,transparent)]" />
+      
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="max-w-3xl mb-16 space-y-4">
+          <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
+            Value Proposition
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-black tracking-tight leading-tight">
+            Why PEB Engineers & Architects Specify Madhu Ratna
+          </h2>
+          <p className="text-sm text-slate-400 leading-relaxed max-w-xl">
+            We merge premium raw materials, automated precision stamping, and rigorous lab inspections to deliver roofing products that outperform standard accessories.
+          </p>
+        </div>
+
+        {/* Why Choose Us Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {companyConfig.coreValues.map((value, idx) => {
+            const Icon = iconMap[value.icon] || ShieldCheck;
+            return (
+              <div
+                key={idx}
+                className="flex flex-col p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-brand-orange/20 transition-all duration-300 group"
+              >
+                {/* Icon wrapper */}
+                <div className="inline-flex items-center justify-center h-12 w-12 rounded-xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors mb-5">
+                  <Icon className="h-5 w-5" />
+                </div>
+
+                <h3 className="text-base font-bold text-white mb-3 group-hover:text-brand-orange-light transition-colors">
+                  {value.title}
+                </h3>
+
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  {value.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
