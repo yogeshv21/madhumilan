@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { Mail, Phone, MapPin, Clock, MessageSquare, ArrowRight } from "lucide-react";
 import { companyConfig } from "@/data/company";
+import { contactContent } from "@/data/contact";
 import { constructMetadata } from "@/lib/metadata";
 import { getContactPageSchema } from "@/lib/seo";
 import ContactForm from "@/components/contact/ContactForm";
@@ -14,6 +15,7 @@ export const metadata: Metadata = constructMetadata({
 
 export default function ContactPage() {
   const jsonLd = getContactPageSchema();
+  const content = contactContent;
 
   return (
     <div className="bg-slate-50 dark:bg-slate-950 pb-20">
@@ -29,13 +31,13 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-transparent" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
           <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
-            Get In Touch
+            {content.hero.badge}
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
-            Connect With Our Engineering Sales Desk
+            {content.hero.title}
           </h1>
           <p className="text-sm text-slate-350 max-w-2xl leading-relaxed">
-            Have questions about metal thickness limits, pull-out capacities, or shipping container sizes? Send us your queries directly.
+            {content.hero.description}
           </p>
         </div>
       </section>
@@ -53,10 +55,10 @@ export default function ContactPage() {
             {/* Info Card */}
             <div className="bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl p-6 lg:p-8 shadow-xs space-y-6">
               <h3 className="text-base font-bold text-brand-blue dark:text-white uppercase tracking-wider border-b border-slate-100 dark:border-slate-800 pb-3">
-                Corporate Contacts
+                {content.contacts.title}
               </h3>
 
-              <div className="space-y-4 text-xs text-slate-600 dark:text-slate-350">
+              <div className="space-y-4 text-xs text-slate-600 dark:text-slate-355">
                 <div className="flex items-start gap-3">
                   <div className="h-8 w-8 rounded-lg bg-brand-orange/10 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
                     <MapPin className="h-4.5 w-4.5" />
@@ -104,10 +106,10 @@ export default function ContactPage() {
             <div className="bg-gradient-to-r from-emerald-600 to-teal-700 text-white rounded-2xl p-6 lg:p-8 shadow-md space-y-4">
               <div className="flex items-center gap-2">
                 <MessageSquare className="h-5 w-5" />
-                <h4 className="text-sm font-bold uppercase tracking-wider">Fast WhatsApp Support</h4>
+                <h4 className="text-sm font-bold uppercase tracking-wider">{content.whatsapp.title}</h4>
               </div>
               <p className="text-xs text-slate-100 leading-relaxed">
-                Connect directly with a sales representative for immediate pricing quotes or material delivery tracking.
+                {content.whatsapp.description}
               </p>
               <div>
                 <a
@@ -118,7 +120,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-white text-emerald-700 hover:bg-slate-50 px-5 py-3 text-xs font-bold uppercase tracking-wider transition-colors shadow-sm focus:outline-none"
                 >
-                  Start WhatsApp Chat
+                  {content.whatsapp.buttonLabel}
                   <ArrowRight className="h-3.5 w-3.5" />
                 </a>
               </div>
@@ -144,3 +146,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

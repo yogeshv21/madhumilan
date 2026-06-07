@@ -3,11 +3,13 @@
 import React from "react";
 import { Hammer, Database, Settings } from "lucide-react";
 import { companyConfig } from "@/data/company";
+import { landingContent } from "@/data/landing";
 
 const iconMap = [Settings, Database, Hammer];
 
 export default function ManufacturingExcellence() {
   const infra = companyConfig.infrastructure;
+  const content = landingContent.manufacturingExcellence;
 
   return (
     <section className="py-20 lg:py-28 bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900">
@@ -17,10 +19,10 @@ export default function ManufacturingExcellence() {
           <div className="space-y-6">
             <div className="space-y-2">
               <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
-                Operational Standard
+                {content.badge}
               </span>
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-brand-blue dark:text-white">
-                Modern Infrastructure & Continuous Quality Controls
+                {content.title}
               </h2>
             </div>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
@@ -53,20 +55,15 @@ export default function ManufacturingExcellence() {
             <div className="absolute inset-0 bg-brand-blue rounded-2xl transform translate-x-3 -translate-y-3 opacity-10 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-300" />
             <div className="relative border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-slate-900 p-8 lg:p-10 shadow-lg">
               <h3 className="text-base font-bold text-brand-blue dark:text-white uppercase tracking-wider mb-6">
-                Our ISO Quality Assurance Checklist
+                {content.qaTitle}
               </h3>
               
               <div className="space-y-5">
-                {[
-                  { step: "01", label: "Raw Material Verification", desc: "Chemical compositions verification & mechanical yield testing of steel and polymers." },
-                  { step: "02", label: "In-Process Dimensions Audit", desc: "Continuous micro-meter callout audits on progressive metal dies." },
-                  { step: "03", label: "Accelerated Stress Testing", desc: "500-hour salt-spray salt chamber runs and vertical pull-out stress testing." },
-                  { step: "04", label: "Batch Traceability Tagging", desc: "Unique serial printing to trace raw inputs and mechanical parameters." }
-                ].map((item, idx) => (
+                {content.qaChecklist.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 pb-4 border-b border-slate-100 dark:border-slate-800 last:border-0 last:pb-0">
                     <span className="text-lg font-black text-brand-orange">{item.step}</span>
                     <div>
-                      <h4 className="text-xs font-bold text-slate-800 dark:text-white">{item.label}</h4>
+                      <h4 className="font-bold text-slate-800 dark:text-white text-xs">{item.label}</h4>
                       <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>

@@ -3,9 +3,11 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { useQuote } from "@/context/QuoteContext";
+import { landingContent } from "@/data/landing";
 
 export default function RequestQuoteCTA() {
   const { openQuote } = useQuote();
+  const content = landingContent.requestQuoteCta;
 
   return (
     <section className="py-20 lg:py-24 bg-gradient-to-r from-slate-100 via-brand-gray to-slate-50 text-slate-900 border-y border-slate-200 relative overflow-hidden">
@@ -15,11 +17,11 @@ export default function RequestQuoteCTA() {
 
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight max-w-3xl mx-auto text-brand-blue">
-          Need a Custom Pre-Engineered Building or Structural Steel System?
+          {content.title}
         </h2>
         
         <p className="text-base text-slate-650 max-w-xl mx-auto leading-relaxed">
-          Submit your project requirements to our structural engineering desk today. We offer custom span configurations, material grade selections, and detailed pricing packages for contractors and developers.
+          {content.description}
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
@@ -27,7 +29,7 @@ export default function RequestQuoteCTA() {
             onClick={openQuote}
             className="cursor-pointer inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-brand-orange hover:bg-brand-orange-light px-8 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-md hover:shadow-lg transition-all duration-200"
           >
-            Request Custom Quotation
+            {content.primaryButton}
             <ArrowRight className="h-4.5 w-4.5" />
           </button>
           
@@ -35,10 +37,11 @@ export default function RequestQuoteCTA() {
             href="/contact"
             className="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-lg bg-white hover:bg-slate-50 border border-slate-250 hover:border-slate-350 px-8 py-4 text-sm font-bold uppercase tracking-wider text-slate-700 shadow-xs hover:shadow-sm transition-all"
           >
-            Get In Touch
+            {content.secondaryButton}
           </a>
         </div>
       </div>
     </section>
   );
 }
+

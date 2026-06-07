@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { Cpu, ShieldCheck, Users, Leaf, LucideIcon, Award, CheckSquare } from "lucide-react";
 import { companyConfig } from "@/data/company";
+import { aboutContent } from "@/data/about";
 import { constructMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = constructMetadata({
@@ -15,10 +16,13 @@ const iconMap: Record<string, LucideIcon> = {
   ShieldCheck,
   Users,
   Leaf,
+  Award,
+  CheckSquare
 };
 
 export default function AboutPage() {
   const infra = companyConfig.infrastructure;
+  const content = aboutContent;
 
   return (
     <div className="bg-slate-50 dark:bg-slate-950">
@@ -28,13 +32,13 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-r from-brand-dark via-brand-dark/90 to-transparent" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10 space-y-4">
           <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
-            Enterprise Profile
+            {content.hero.badge}
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
-            About Madhu Ratna Industry
+            {content.hero.title}
           </h1>
           <p className="text-sm text-slate-350 max-w-2xl leading-relaxed">
-            Leading the manufacturing and delivery of high-integrity pre-engineered metal roofing parts, weather-proof foam profiles, and heavy fastening systems.
+            {content.hero.description}
           </p>
         </div>
       </section>
@@ -46,7 +50,7 @@ export default function AboutPage() {
             {/* Story Text */}
             <div className="space-y-6">
               <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-brand-blue dark:text-white">
-                Our Corporate Journey
+                {content.journey.title}
               </h2>
               <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
                 {companyConfig.history}
@@ -104,10 +108,10 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12 space-y-3">
             <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
-              Company Culture
+              {content.values.badge}
             </span>
             <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-brand-blue dark:text-white">
-              The Principles That Guide Our Manufacturing
+              {content.values.title}
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -139,10 +143,10 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mb-12 space-y-3">
             <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
-              Factory Assets
+              {content.infrastructure.badge}
             </span>
             <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-brand-blue dark:text-white">
-              High-Capacity Stamping & Extrusion Plant
+              {content.infrastructure.title}
             </h2>
             <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
               {infra.description}
@@ -158,7 +162,7 @@ export default function AboutPage() {
                 <div className="text-xs font-black text-brand-orange bg-brand-orange/10 px-2.5 py-1 rounded-md inline-block">
                   Line Phase 0{idx + 1}
                 </div>
-                <h3 className="text-base font-bold text-slate-850 dark:text-white">
+                <h3 className="text-base font-bold text-slate-855 dark:text-white">
                   {section.title}
                 </h3>
                 <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
@@ -175,23 +179,18 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
-              Workflow Lifecycle
+              {content.process.badge}
             </span>
             <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-brand-blue dark:text-white">
-              End-to-End Precision Fabrication Process
+              {content.process.title}
             </h2>
-            <p className="text-sm text-slate-550 dark:text-slate-450 leading-relaxed">
-              From design reviews to final dispatch, our process ensures absolute adherence to engineering tolerance requirements.
+            <p className="text-sm text-slate-550 dark:text-slate-455 leading-relaxed">
+              {content.process.description}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
-            {[
-              { step: "01", label: "Tooling & Die Design", desc: "CAD/CAM blueprint design of progressive dies and extrusion molds for custom profiles." },
-              { step: "02", label: "Material Sourcing", desc: "Receiving certified high-tensile steel coils and UV-stabilized chemical granules." },
-              { step: "03", label: "Automated Stamping", desc: "Continuous progressive press lines fabricating clips and brackets with zero deviation." },
-              { step: "04", label: "Testing & Assembly", desc: "Subjecting batches to load limits and corrosion tests before packing for dispatch." }
-            ].map((proc, idx) => (
+            {content.process.steps.map((proc, idx) => (
               <div key={idx} className="relative bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200/50 dark:border-slate-800 space-y-3">
                 <span className="text-3xl font-black text-brand-orange/20 dark:text-brand-orange/10 block">
                   {proc.step}
@@ -215,23 +214,22 @@ export default function AboutPage() {
             <CheckSquare className="h-6 w-6" />
           </div>
           <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-brand-blue dark:text-white">
-            Our Quality Commitment Statement
+            {content.quality.title}
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-350 max-w-3xl mx-auto leading-relaxed">
-            At Madhu Ratna Industry, quality is not a department; it is a manufacturing philosophy. We purchase only mill-certified coils, utilize advanced automation to minimize manual assembly errors, and execute structural shear inspections on every production lot. We guarantee our roofing clips and components are designed to equal or exceed the service lifecycle of your cladding panels.
+          <p className="text-sm sm:text-base text-slate-650 dark:text-slate-350 max-w-3xl mx-auto leading-relaxed">
+            {content.quality.description}
           </p>
           <div className="pt-4 flex items-center justify-center gap-6 text-xs text-slate-400 font-bold uppercase tracking-wider">
-            <span className="flex items-center gap-1">
-              <Award className="h-4 w-4 text-brand-orange" />
-              ISO 9001:2015 Approved
-            </span>
-            <span className="flex items-center gap-1">
-              <Award className="h-4 w-4 text-brand-orange" />
-              AS3566 Standard Compliant
-            </span>
+            {content.quality.standards.map((std, i) => (
+              <span key={i} className="flex items-center gap-1">
+                <Award className="h-4 w-4 text-brand-orange" />
+                {std.label}
+              </span>
+            ))}
           </div>
         </div>
       </section>
     </div>
   );
 }
+

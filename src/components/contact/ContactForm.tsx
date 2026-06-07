@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
-import { Send, Loader2, CheckCircle } from "lucide-react";
+import { Send, Loader2, CheckCircle, User, Building2, Phone, Mail, ClipboardList, MessageSquare } from "lucide-react";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -57,17 +57,22 @@ export default function ContactForm() {
 
   if (isSuccess) {
     return (
-      <div className="flex flex-col items-center justify-center p-8 text-center bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl shadow-xs min-h-[300px]">
-        <CheckCircle className="h-16 w-16 text-emerald-500 animate-bounce mb-4" />
-        <h3 className="text-xl font-bold text-slate-850 dark:text-white">
-          Inquiry Submitted Successfully!
+      <div className="flex flex-col items-center justify-center p-8 lg:p-12 text-center bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-3xl shadow-sm min-h-[400px] relative overflow-hidden">
+        <div className="absolute -top-20 -right-20 w-48 h-48 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-20 -left-20 w-48 h-48 bg-brand-orange/5 rounded-full blur-3xl pointer-events-none" />
+        
+        <div className="relative inline-flex items-center justify-center p-4 rounded-full bg-emerald-50 dark:bg-emerald-950/30 text-emerald-500 mb-6 ring-8 ring-emerald-500/5">
+          <CheckCircle className="h-12 w-12 animate-pulse" />
+        </div>
+        <h3 className="text-xl sm:text-2xl font-black text-brand-blue dark:text-white">
+          Inquiry Submitted!
         </h3>
-        <p className="mt-2 text-xs text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
+        <p className="mt-3 text-xs sm:text-sm text-slate-500 dark:text-slate-400 max-w-sm leading-relaxed">
           Thank you for contacting us. A sales engineer from our GIDC Ahmedabad office will review your specifications and contact you shortly.
         </p>
         <button
           onClick={handleReset}
-          className="mt-6 rounded-lg bg-brand-blue hover:bg-brand-light-blue px-6 py-2.5 text-xs font-bold uppercase tracking-wider text-white transition-colors cursor-pointer"
+          className="mt-8 cursor-pointer rounded-xl bg-brand-blue hover:bg-brand-orange text-xs sm:text-sm font-bold uppercase tracking-wider text-white px-8 py-3.5 shadow-md hover:shadow-lg transition-all duration-200 focus:outline-none"
         >
           Send Another Message
         </button>
@@ -78,24 +83,36 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-5 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl p-6 lg:p-8 shadow-xs"
+      className="space-y-6 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-3xl p-6 lg:p-10 shadow-md relative overflow-hidden"
     >
-      <h3 className="text-base font-bold text-brand-blue dark:text-white uppercase tracking-wider border-b border-slate-100 dark:border-slate-800 pb-3 mb-4">
-        Technical Inquiry Form
-      </h3>
+      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-brand-orange to-brand-orange-light" />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <h3 className="text-lg font-black text-brand-blue dark:text-white uppercase tracking-wider">
+          Technical Inquiry Form
+        </h3>
+        <p className="text-xs text-slate-450 dark:text-slate-500 mt-1">
+          Provide your project requirements below to receive custom pricing and span options.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
             Full Name *
           </label>
-          <input
-            {...register("name")}
-            className="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-850 p-2.5 text-xs text-slate-900 dark:text-white focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none transition-all"
-            placeholder="John Doe"
-          />
+          <div className="relative">
+            <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400 dark:text-slate-500">
+              <User className="h-4 w-4" />
+            </span>
+            <input
+              {...register("name")}
+              className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-850/50 pl-10 pr-4 py-3 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
+              placeholder="John Doe"
+            />
+          </div>
           {errors.name && (
-            <p className="mt-1 text-[10px] text-rose-500 font-medium">{errors.name.message}</p>
+            <p className="mt-1.5 text-[10px] sm:text-xs text-rose-500 font-semibold">{errors.name.message}</p>
           )}
         </div>
 
@@ -103,29 +120,39 @@ export default function ContactForm() {
           <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
             Company Name *
           </label>
-          <input
-            {...register("company")}
-            className="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-850 p-2.5 text-xs text-slate-900 dark:text-white focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none transition-all"
-            placeholder="Engineering Corp Ltd"
-          />
+          <div className="relative">
+            <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400 dark:text-slate-500">
+              <Building2 className="h-4 w-4" />
+            </span>
+            <input
+              {...register("company")}
+              className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-850/50 pl-10 pr-4 py-3 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
+              placeholder="Engineering Corp Ltd"
+            />
+          </div>
           {errors.company && (
-            <p className="mt-1 text-[10px] text-rose-500 font-medium">{errors.company.message}</p>
+            <p className="mt-1.5 text-[10px] sm:text-xs text-rose-500 font-semibold">{errors.company.message}</p>
           )}
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
             Contact Number *
           </label>
-          <input
-            {...register("phone")}
-            className="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-850 p-2.5 text-xs text-slate-900 dark:text-white focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none transition-all"
-            placeholder="+91 98765 43210"
-          />
+          <div className="relative">
+            <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400 dark:text-slate-500">
+              <Phone className="h-4 w-4" />
+            </span>
+            <input
+              {...register("phone")}
+              className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-855/50 pl-10 pr-4 py-3 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
+              placeholder="+91 98765 43210"
+            />
+          </div>
           {errors.phone && (
-            <p className="mt-1 text-[10px] text-rose-500 font-medium">{errors.phone.message}</p>
+            <p className="mt-1.5 text-[10px] sm:text-xs text-rose-500 font-semibold">{errors.phone.message}</p>
           )}
         </div>
 
@@ -133,14 +160,19 @@ export default function ContactForm() {
           <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
             Email Address *
           </label>
-          <input
-            {...register("email")}
-            type="email"
-            className="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-850 p-2.5 text-xs text-slate-900 dark:text-white focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none transition-all"
-            placeholder="client@company.com"
-          />
+          <div className="relative">
+            <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400 dark:text-slate-500">
+              <Mail className="h-4 w-4" />
+            </span>
+            <input
+              {...register("email")}
+              type="email"
+              className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-855/50 pl-10 pr-4 py-3 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
+              placeholder="client@company.com"
+            />
+          </div>
           {errors.email && (
-            <p className="mt-1 text-[10px] text-rose-500 font-medium">{errors.email.message}</p>
+            <p className="mt-1.5 text-[10px] sm:text-xs text-rose-500 font-semibold">{errors.email.message}</p>
           )}
         </div>
       </div>
@@ -149,20 +181,30 @@ export default function ContactForm() {
         <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
           Product Requirement *
         </label>
-        <select
-          {...register("productRequirement")}
-          className="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-850 p-2.5 text-xs text-slate-900 dark:text-white focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none transition-all"
-        >
-          <option value="">Select Product Category</option>
-          <option value="ssr-clips">Standing Seam Roofing Clips (SSR Clips)</option>
-          <option value="foam-closers">Foam Closer Strips</option>
-          <option value="accessories">Roofing Accessories (Ridge Caps, Trims)</option>
-          <option value="fasteners">Industrial Fasteners / Screws</option>
-          <option value="components">Industrial Roofing Components (Brackets)</option>
-          <option value="custom">Custom Metal Stamping / Stretched Parts</option>
-        </select>
+        <div className="relative">
+          <span className="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none text-slate-400 dark:text-slate-500">
+            <ClipboardList className="h-4 w-4" />
+          </span>
+          <select
+            {...register("productRequirement")}
+            className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-855/50 pl-10 pr-4 py-3 text-xs sm:text-sm text-slate-900 dark:text-white focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs appearance-none cursor-pointer"
+          >
+            <option value="">Select Product Category</option>
+            <option value="ssr-clips">Standing Seam Roofing Clips (SSR Clips)</option>
+            <option value="foam-closers">Foam Closer Strips</option>
+            <option value="accessories">Roofing Accessories (Ridge Caps, Trims)</option>
+            <option value="fasteners">Industrial Fasteners / Screws</option>
+            <option value="components">Industrial Roofing Components (Brackets)</option>
+            <option value="custom">Custom Metal Stamping / Stretched Parts</option>
+          </select>
+          <div className="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-slate-400">
+            <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">
+              <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" />
+            </svg>
+          </div>
+        </div>
         {errors.productRequirement && (
-          <p className="mt-1 text-[10px] text-rose-500 font-medium">{errors.productRequirement.message}</p>
+          <p className="mt-1.5 text-[10px] sm:text-xs text-rose-500 font-semibold">{errors.productRequirement.message}</p>
         )}
       </div>
 
@@ -170,25 +212,30 @@ export default function ContactForm() {
         <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
           Detailed Message & Specifications *
         </label>
-        <textarea
-          {...register("message")}
-          rows={5}
-          className="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-850 p-2.5 text-xs text-slate-900 dark:text-white focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none transition-all resize-none"
-          placeholder="Please describe thickness, material grade, profiles, quantities, and site logistics details..."
-        />
+        <div className="relative">
+          <span className="absolute top-3.5 left-3.5 pointer-events-none text-slate-400 dark:text-slate-500">
+            <MessageSquare className="h-4 w-4" />
+          </span>
+          <textarea
+            {...register("message")}
+            rows={5}
+            className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-855/50 pl-10 pr-4 py-3 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all resize-none shadow-xs"
+            placeholder="Please describe thickness, material grade, profiles, quantities, and site logistics details..."
+          />
+        </div>
         {errors.message && (
-          <p className="mt-1 text-[10px] text-rose-500 font-medium">{errors.message.message}</p>
+          <p className="mt-1.5 text-[10px] sm:text-xs text-rose-500 font-semibold">{errors.message.message}</p>
         )}
       </div>
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="flex w-full items-center justify-center rounded-lg bg-brand-orange p-3 text-xs font-bold uppercase tracking-wider text-white hover:bg-brand-orange-light transition-all disabled:bg-slate-400 shadow-md hover:shadow-lg cursor-pointer focus:outline-none"
+        className="flex w-full items-center justify-center rounded-xl bg-brand-orange p-4 text-xs sm:text-sm font-bold uppercase tracking-wider text-white hover:bg-brand-orange-light transition-all disabled:bg-slate-400 shadow-md hover:shadow-lg cursor-pointer focus:outline-none ring-4 ring-transparent focus:ring-brand-orange/10"
       >
         {isSubmitting ? (
           <>
-            <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+            <Loader2 className="mr-2 h-4.5 w-4.5 animate-spin" />
             Sending Inquiry...
           </>
         ) : (

@@ -4,8 +4,11 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { companyConfig } from "@/data/company";
+import { landingContent } from "@/data/landing";
 
 export default function CompanyOverview() {
+  const content = landingContent.companyOverview;
+
   return (
     <section className="py-20 lg:py-28 bg-white dark:bg-slate-900 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -18,7 +21,7 @@ export default function CompanyOverview() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(ellipse_at_top_right,#f2641920,transparent)]" />
               
               <h3 className="text-xl font-black text-white uppercase tracking-wider mb-6 pb-4 border-b border-slate-800">
-                Manufacturing Footprint
+                {content.footprintTitle}
               </h3>
 
               <div className="grid grid-cols-2 gap-6 lg:gap-8">
@@ -35,14 +38,12 @@ export default function CompanyOverview() {
               </div>
 
               <div className="mt-8 pt-6 border-t border-slate-800 space-y-3">
-                <div className="flex items-center gap-2 text-slate-300 text-xs font-semibold">
-                  <CheckCircle2 className="h-4 w-4 text-brand-orange" />
-                  ISO 9001:2015 Certification Registry
-                </div>
-                <div className="flex items-center gap-2 text-slate-300 text-xs font-semibold">
-                  <CheckCircle2 className="h-4 w-4 text-brand-orange" />
-                  AS3566 Class-3 & Class-4 Fastener Conformance
-                </div>
+                {content.certifications.map((cert, idx) => (
+                  <div key={idx} className="flex items-center gap-2 text-slate-300 text-xs font-semibold">
+                    <CheckCircle2 className="h-4 w-4 text-brand-orange" />
+                    {cert}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -51,10 +52,10 @@ export default function CompanyOverview() {
           <div className="space-y-6">
             <div className="space-y-2">
               <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
-                Corporate Profile
+                {content.badge}
               </span>
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-brand-blue dark:text-white leading-tight">
-                Engineering Integrity Since 2008
+                {content.title}
               </h2>
             </div>
 
@@ -91,7 +92,7 @@ export default function CompanyOverview() {
                 href="/about"
                 className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wider text-brand-orange hover:text-brand-orange-light transition-colors group focus:outline-none"
               >
-                Learn More About Our Facility
+                {content.learnMoreLabel}
                 <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -101,3 +102,4 @@ export default function CompanyOverview() {
     </section>
   );
 }
+

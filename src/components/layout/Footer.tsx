@@ -5,10 +5,12 @@ import Link from "next/link";
 import { Mail, Phone, MapPin, Clock, Send, MessageCircle } from "lucide-react";
 import { companyConfig } from "@/data/company";
 import { products } from "@/data/products";
+import { footerContent } from "@/data/footer";
 
 export default function Footer() {
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
+  const content = footerContent;
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,51 +57,23 @@ export default function Footer() {
           {/* Column 2: Quick Links */}
           <div>
             <h4 className="text-sm font-bold text-brand-blue uppercase tracking-wider mb-6">
-              Corporate Links
+              {content.sections.corporateLinks.title}
             </h4>
             <ul className="space-y-3 text-sm">
-              <li>
-                <Link href="/" className="hover:text-brand-orange transition-colors focus:outline-none">
-                  Home Overview
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="hover:text-brand-orange transition-colors focus:outline-none">
-                  About Our Company
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="hover:text-brand-orange transition-colors focus:outline-none">
-                  Products & Systems
-                </Link>
-              </li>
-              <li>
-                <Link href="/configurator" className="hover:text-brand-orange transition-colors focus:outline-none text-brand-orange font-semibold">
-                  Interactive Design Tool
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-brand-orange transition-colors focus:outline-none">
-                  Engineering Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/industries" className="hover:text-brand-orange transition-colors focus:outline-none">
-                  Industries We Serve
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-brand-orange transition-colors focus:outline-none">
-                  Contact Us
-                </Link>
-              </li>
+              {content.sections.corporateLinks.links.map((link, idx) => (
+                <li key={idx}>
+                  <Link href={link.href} className="hover:text-brand-orange transition-colors focus:outline-none">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Column 3: Featured Products */}
           <div>
             <h4 className="text-sm font-bold text-brand-blue uppercase tracking-wider mb-6">
-              Products & Systems
+              {content.sections.products.title}
             </h4>
             <ul className="space-y-3 text-sm">
               {products.slice(0, 5).map((prod) => (
@@ -119,7 +93,7 @@ export default function Footer() {
           <div className="space-y-6">
             <div>
               <h4 className="text-sm font-bold text-brand-blue uppercase tracking-wider mb-4">
-                Corporate Headquarters
+                {content.sections.headquarters.title}
               </h4>
               <ul className="space-y-3 text-sm text-slate-650">
                 <li className="flex items-start gap-2.5">
@@ -143,7 +117,7 @@ export default function Footer() {
 
             <div>
               <h5 className="text-xs font-bold text-brand-blue uppercase tracking-wider mb-2">
-                Subscribe to Technical Updates
+                {content.sections.newsletter.title}
               </h5>
               <form onSubmit={handleSubscribe} className="flex gap-2">
                 <input
@@ -151,20 +125,20 @@ export default function Footer() {
                   required
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
-                  placeholder="Enter email address"
+                  placeholder={content.sections.newsletter.placeholder}
                   className="rounded-lg bg-white border border-slate-300 p-2 text-xs text-slate-800 placeholder-slate-400 focus:border-brand-orange focus:ring-1 focus:ring-brand-orange outline-none grow transition-all"
                 />
                 <button
                   type="submit"
                   className="cursor-pointer rounded-lg bg-brand-orange px-3 hover:bg-brand-orange-light text-white transition-colors focus:outline-none"
-                  aria-label="Subscribe"
+                  aria-label={content.sections.newsletter.buttonLabel}
                 >
                   <Send className="h-3.5 w-3.5" />
                 </button>
               </form>
               {subscribed && (
                 <p className="mt-1.5 text-[10px] text-emerald-600 font-semibold">
-                  Thank you! You are subscribed.
+                  {content.sections.newsletter.successMessage}
                 </p>
               )}
             </div>
@@ -172,20 +146,17 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-slate-200 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} Madhu Ratna Industry. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {content.copyright.template}</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="hover:text-brand-blue transition-colors focus:outline-none">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-brand-blue transition-colors focus:outline-none">
-              Terms of Supply
-            </Link>
-            <Link href="/sitemap" className="hover:text-brand-blue transition-colors focus:outline-none">
-              Sitemap
-            </Link>
+            {content.policies.map((policy, idx) => (
+              <Link key={idx} href={policy.href} className="hover:text-brand-blue transition-colors focus:outline-none">
+                {policy.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
     </footer>
   );
 }
+

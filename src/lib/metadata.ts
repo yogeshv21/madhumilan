@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 export function constructMetadata({
   title = "Precision Roofing SSR Clips & Foam Closers",
-  description = "Premium manufacturer and supplier of standing seam clips, foam closer strips, fasteners, and PEB roofing components. Certified ISO 9001:2015 quality.",
+  description = "Premium manufacturer and supplier of standing seam clips, foam closer strips, fasteners, and PEB roofing components. Certified premium quality.",
   image = "/images/products/ssr-clips.png",
   noIndex = false,
   slug = "",

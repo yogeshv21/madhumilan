@@ -13,29 +13,7 @@ export const metadata: Metadata = constructMetadata({
   slug: "products",
 });
 
-interface ProductsPageProps {
-  searchParams: Promise<{ category?: string }>;
-}
-
-const categories = [
-  { name: "All Products", value: "" },
-  { name: "Roofing Clips", value: "Clips" },
-  { name: "Foam Closers", value: "Closers" },
-  { name: "Fasteners", value: "Fasteners" },
-  { name: "Accessories", value: "Accessories" },
-  { name: "Components", value: "Components" },
-];
-
-export default async function ProductsPage({ searchParams }: ProductsPageProps) {
-  const resolvedSearchParams = await searchParams;
-  const activeCategory = resolvedSearchParams.category || "";
-
-  const filteredProducts = activeCategory
-    ? products.filter(
-        (p) => p.category.toLowerCase() === activeCategory.toLowerCase()
-      )
-    : products;
-
+export default function ProductsPage() {
   return (
     <div className="bg-slate-50 dark:bg-slate-950 pb-20">
       {/* Header Banner */}
@@ -55,106 +33,51 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         </div>
       </section>
 
-      {/* Category Filter Bar */}
-      <div className="bg-white dark:bg-slate-900 border-b border-slate-200/60 dark:border-slate-800 sticky top-16 lg:top-20 z-30 shadow-xs">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 overflow-x-auto scrollbar-none flex items-center justify-start lg:justify-center gap-2">
-          {categories.map((cat) => {
-            const isActive = activeCategory.toLowerCase() === cat.value.toLowerCase();
-            return (
-              <Link
-                key={cat.name}
-                href={cat.value ? `?category=${cat.value}` : "/products"}
-                className={`rounded-lg px-4 py-2 text-xs font-bold uppercase tracking-wider transition-colors shrink-0 ${
-                  isActive
-                    ? "bg-brand-orange text-white"
-                    : "bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700"
-                }`}
-              >
-                {cat.name}
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* Product Grid Area */}
+      {/* Product Grid */}
       <section className="mt-12 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {filteredProducts.length === 0 ? (
-          <div className="text-center py-20 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 rounded-2xl">
-            <p className="text-sm text-slate-500 dark:text-slate-400">
-              No products found in this category.
-            </p>
-            <Link
-              href="/products"
-              className="mt-4 inline-block text-xs font-bold uppercase tracking-wider text-brand-orange hover:text-brand-orange-light"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {products.map((prod) => (
+            <div
+              key={prod.slug}
+              className="flex flex-col rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 shadow-xs hover:shadow-md transition-all duration-300 overflow-hidden group"
             >
-              Clear Filters
-            </Link>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProducts.map((prod) => (
-              <div
-                key={prod.slug}
-                className="flex flex-col rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 shadow-xs hover:shadow-lg transition-all duration-300 overflow-hidden group"
-              >
-                {/* Product Image */}
-                <div className="relative h-60 w-full overflow-hidden bg-slate-100 dark:bg-slate-800">
-                  <Image
-                    src={prod.image}
-                    alt={prod.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <span className="absolute top-4 left-4 inline-flex items-center gap-1 px-3 py-1 rounded-md bg-brand-blue/80 dark:bg-slate-950/80 backdrop-blur-xs text-[10px] font-bold text-white uppercase tracking-wider">
-                    <Tag className="h-3 w-3 text-brand-orange" />
-                    {prod.category}
-                  </span>
-                </div>
+              {/* Product Image */}
+              <Link href={`/products/${prod.slug}`} className="relative block h-64 w-full overflow-hidden bg-slate-100 dark:bg-slate-800 focus:outline-none">
+                <Image
+                  src={prod.image}
+                  alt={prod.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <span className="absolute top-3 left-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-brand-blue/80 dark:bg-slate-950/80 backdrop-blur-xs text-[10px] font-bold text-white uppercase tracking-wider">
+                  <Tag className="h-3 w-3 text-brand-orange" />
+                  {prod.category}
+                </span>
+              </Link>
 
-                {/* Product Detail info */}
-                <div className="p-6 flex flex-col justify-between grow">
-                  <div className="space-y-3">
-                    <h3 className="text-lg font-bold text-brand-blue dark:text-white leading-snug group-hover:text-brand-orange transition-colors">
-                      {prod.name}
-                    </h3>
-                    <p className="text-xs text-slate-500 dark:text-slate-400 leading-relaxed line-clamp-3">
-                      {prod.shortDescription}
-                    </p>
+              {/* Minimal content */}
+              <div className="p-5 flex flex-col grow">
+                <Link href={`/products/${prod.slug}`} className="focus:outline-none">
+                  <h3 className="text-sm font-bold text-brand-blue dark:text-white leading-snug group-hover:text-brand-orange transition-colors line-clamp-2">
+                    {prod.name}
+                  </h3>
+                </Link>
 
-                    {/* Quick Specs summary */}
-                    <div className="pt-3 flex flex-wrap gap-2">
-                      {Object.entries(prod.specifications)
-                        .slice(0, 2)
-                        .map(([key, val]) => (
-                          <span
-                            key={key}
-                            className="bg-slate-100 dark:bg-slate-800/60 border border-slate-200/40 dark:border-slate-800 text-[9px] font-semibold text-slate-500 dark:text-slate-400 rounded px-2 py-0.5"
-                          >
-                            <strong>{key}:</strong> {val}
-                          </span>
-                        ))}
-                    </div>
-                  </div>
-
-                  <div className="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between gap-4">
-                    <Link
-                      href={`/products/${prod.slug}`}
-                      className="inline-flex items-center text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 hover:text-brand-orange transition-colors focus:outline-none"
-                    >
-                      Specifications
-                      <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
-                    </Link>
-
-                    {/* Interactive client actions */}
-                    <ProductCardActions slug={prod.slug} />
-                  </div>
+                <div className="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 mt-4 flex items-center justify-between gap-3">
+                  <Link
+                    href={`/products/${prod.slug}`}
+                    className="inline-flex items-center gap-1 text-[11px] font-bold uppercase tracking-wider text-slate-600 dark:text-slate-400 hover:text-brand-orange transition-colors focus:outline-none"
+                  >
+                    Details
+                    <ArrowRight className="h-3 w-3" />
+                  </Link>
+                  <ProductCardActions slug={prod.slug} />
                 </div>
               </div>
-            ))}
-          </div>
-        )}
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   );

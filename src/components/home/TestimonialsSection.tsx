@@ -3,21 +3,24 @@
 import React from "react";
 import { Star, Quote } from "lucide-react";
 import { testimonials } from "@/data/testimonials";
+import { landingContent } from "@/data/landing";
 
 export default function TestimonialsSection() {
+  const content = landingContent.testimonials;
+
   return (
     <section className="py-20 lg:py-28 bg-slate-50 dark:bg-slate-950 border-t border-slate-100 dark:border-slate-900">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16 space-y-4">
           <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
-            Client Success
+            {content.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-brand-blue dark:text-white leading-tight">
-            Trusted by Major Pre-Engineered Building Contractors
+            {content.title}
           </h2>
           <p className="text-sm text-slate-500 dark:text-slate-400 max-w-xl">
-            Read what general contractors, project managers, and lead structural engineers say about our roofing components quality and logistics support.
+            {content.description}
           </p>
         </div>
 
@@ -64,3 +67,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+

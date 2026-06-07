@@ -3,9 +3,17 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, Award, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Shield, Award, CheckCircle2, LucideIcon } from "lucide-react";
+import { landingContent } from "@/data/landing";
+
+const iconMap: Record<string, LucideIcon> = {
+  Award,
+  CheckCircle2,
+  Shield,
+};
 
 export default function Hero() {
+  const content = landingContent.hero;
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -44,24 +52,26 @@ export default function Hero() {
           className="max-w-3xl"
         >
           {/* Trust Badge */}
-          <motion.div
-            variants={itemVariants}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-brand-orange-light text-xs font-bold uppercase tracking-wider mb-6"
-          >
-            <Shield className="h-3.5 w-3.5" />
-            ISO 9001:2015 Certified Manufacturer
-          </motion.div>
+          {content.trustBadge && (
+            <motion.div
+              variants={itemVariants}
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-orange/15 border border-brand-orange/30 text-brand-orange-light text-xs font-bold uppercase tracking-wider mb-6"
+            >
+              <Shield className="h-3.5 w-3.5" />
+              {content.trustBadge}
+            </motion.div>
+          )}
 
           {/* Headline */}
           <motion.h1
             variants={itemVariants}
             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.1] mb-6"
           >
-            Pre-Engineered Steel Buildings <br />
+            {content.headline.part1} <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-amber-500">
-              & Heavy Structural Steel
+              {content.headline.part2}
             </span>{" "}
-            Systems
+            {content.headline.part3}
           </motion.h1>
 
           {/* Description */}
@@ -69,23 +79,23 @@ export default function Hero() {
             variants={itemVariants}
             className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl"
           >
-            Global leaders in the engineering, fabrication, and supply of custom steel buildings, structural steel frames, and smart warehouse racking systems. Built for structural longevity and rapid bolted site erection.
+            {content.description}
           </motion.p>
 
           {/* CTAs */}
           <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-12">
             <Link
-              href="/configurator"
+              href="/contact"
               className="cursor-pointer inline-flex items-center justify-center gap-2 rounded-lg bg-brand-orange hover:bg-brand-orange-light px-7 py-4 text-sm font-bold uppercase tracking-wider text-white shadow-lg hover:shadow-xl transition-all duration-200"
             >
-              Build Your Design
+              {content.primaryCta}
               <ArrowRight className="h-4.5 w-4.5 animate-pulse" />
             </Link>
             <Link
               href="/products"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-white/10 hover:bg-white/15 border border-white/20 hover:border-white/35 px-7 py-4 text-sm font-bold uppercase tracking-wider text-white transition-all"
             >
-              Explore Solutions
+              {content.secondaryCta}
             </Link>
           </motion.div>
 
@@ -94,38 +104,25 @@ export default function Hero() {
             variants={itemVariants}
             className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-white/10 pt-8"
           >
-            <div className="flex items-center gap-3">
-              <div className="rounded-lg bg-white/5 p-2 text-brand-orange">
-                <Award className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-lg font-black text-white leading-none">18+ Years</p>
-                <p className="text-xs text-slate-400 mt-1 font-medium">Structural Leadership</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <div className="rounded-lg bg-white/5 p-2 text-brand-orange">
-                <CheckCircle2 className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-lg font-black text-white leading-none">AISC & MBMA</p>
-                <p className="text-xs text-slate-400 mt-1 font-medium">Design Conformance</p>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <div className="rounded-lg bg-white/5 p-2 text-brand-orange">
-                <Shield className="h-5 w-5" />
-              </div>
-              <div>
-                <p className="text-lg font-black text-white leading-none">75,000+ MT</p>
-                <p className="text-xs text-slate-400 mt-1 font-medium">Annual Fabrication Capacity</p>
-              </div>
-            </div>
+            {content.highlights.map((highlight, idx) => {
+              const icons = ["Award", "CheckCircle2", "Shield"];
+              const TargetIcon = iconMap[icons[idx]] || Shield;
+              return (
+                <div key={idx} className="flex items-center gap-3">
+                  <div className="rounded-lg bg-white/5 p-2 text-brand-orange">
+                    <TargetIcon className="h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="text-lg font-black text-white leading-none">{highlight.value}</p>
+                    <p className="text-xs text-slate-400 mt-1 font-medium">{highlight.label}</p>
+                  </div>
+                </div>
+              );
+            })}
           </motion.div>
         </motion.div>
       </div>
     </section>
   );
 }
+

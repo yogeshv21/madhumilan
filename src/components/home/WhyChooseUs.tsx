@@ -3,6 +3,7 @@
 import React from "react";
 import { Cpu, ShieldCheck, Users, Leaf, LucideIcon } from "lucide-react";
 import { companyConfig } from "@/data/company";
+import { landingContent } from "@/data/landing";
 
 const iconMap: Record<string, LucideIcon> = {
   Cpu,
@@ -12,6 +13,8 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 export default function WhyChooseUs() {
+  const content = landingContent.whyChooseUs;
+
   return (
     <section className="py-20 lg:py-28 bg-brand-dark text-white relative overflow-hidden">
       {/* Decorative Background Accents */}
@@ -22,13 +25,13 @@ export default function WhyChooseUs() {
         {/* Section Header */}
         <div className="max-w-3xl mb-16 space-y-4">
           <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
-            Value Proposition
+            {content.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight leading-tight">
-            Why PEB Engineers & Architects Specify Madhu Ratna
+            {content.title}
           </h2>
           <p className="text-sm text-slate-400 leading-relaxed max-w-xl">
-            We merge premium raw materials, automated precision stamping, and rigorous lab inspections to deliver roofing products that outperform standard accessories.
+            {content.description}
           </p>
         </div>
 
@@ -61,3 +64,4 @@ export default function WhyChooseUs() {
     </section>
   );
 }
+
