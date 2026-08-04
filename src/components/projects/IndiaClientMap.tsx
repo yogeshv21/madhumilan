@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { MapPin, X, Building2 } from "lucide-react";
 

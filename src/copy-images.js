@@ -1,3 +1,4 @@
+/* eslint-disable */
 const fs = require('fs');
 const path = require('path');
 const { geoMercator, geoPath } = require('d3-geo');
