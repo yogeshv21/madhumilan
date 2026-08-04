@@ -2,96 +2,267 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
-    id: "auto-warehouse-hub",
-    name: "Automated Fulfillment Logistics Hub",
-    location: "Pune, Maharashtra, India",
-    client: "Global Logistics Corp",
-    type: "Pre-Engineered Building (PEB)",
-    area: "125,000 sq.ft.",
-    year: "2025",
-    description: "Complete design, custom fabrication, and erection support for a high-clearance automated sorting facility featuring heavy-duty secondary members and dynamic expansion-tolerant standing seam roofing.",
+    id: "alimco-production-center-ujjain",
+    name: "ALIMCO Production Center",
+    location: "Ujjain, Madhya Pradesh, India",
+    client: "ALIMCO (Artificial Limbs Manufacturing Corporation of India)",
+    type: "Government Industrial PEB",
+    area: "55,000 sq.ft.",
+    year: "2021",
+    description:
+      "Design, fabrication, and erection of a complete Pre-Engineered Steel Building for ALIMCO — a PSU under the Ministry of Social Justice, Government of India. The project demanded strict quality documentation and IS-standard compliance at every stage, from structural design approval to final handover.",
     highlights: [
-      "125,000 sq.ft. clear-span area",
-      "FM Approved double-lock standing seam roof",
-      "Completed erection within 48 days from site delivery"
+      "Government PSU project with full quality documentation and test certificates",
+      "IS-800 and IS-875 compliant primary and secondary structural members",
+      "On-time delivery and erection achieved within the committed project schedule",
     ],
     scope: [
-      "Tekla detailing and structural steel optimization",
-      "Primary frame columns and rafters fabrication",
-      "Supply of roll-formed Z-purlins and sag rods"
-    ]
-  },
-  {
-    id: "heavy-industrial-foundry",
-    name: "Heavy Manufacturing Foundry & Press Shop",
-    location: "Chennai, Tamil Nadu, India",
-    client: "Bharat Heavy Forge",
-    type: "Heavy Structural Steel",
-    area: "85,000 sq.ft.",
-    year: "2024",
-    description: "Multi-crane industrial manufacturing shop designed to support massive dynamic process loads, using high-tensile hot-rolled built-up profiles and shot-blasted coatings.",
-    highlights: [
-      "Designed for twin 35-ton EOT crane operations",
-      "Sa 2.5 shot-blasting surface preparation with epoxy coatings",
-      "Strict compliance with AISC and local seismic load codes"
+      "Structural design and engineering using 3D analysis software",
+      "Factory fabrication of primary frame columns, rafters, and secondary members",
+      "Supply and erection of complete PEB structure including cladding, purlins, and accessories",
     ],
-    scope: [
-      "Custom welded H-beams and portal frame detailing",
-      "Fabrication of crane runway girders and column assemblies",
-      "High-shear bolts and structural anchor assembly supply"
-    ]
   },
   {
-    id: "multi-level-commercial",
-    name: "Multi-Level Corporate Showroom & Office",
-    location: "Riyadh, Saudi Arabia",
-    client: "Al-Rashed Developments",
+    id: "tata-motors-indore",
+    name: "Tata Motors Dealership & Service Centre",
+    location: "Indore, Madhya Pradesh, India",
+    client: "Tata Motors",
     type: "Commercial Steel Structure",
-    area: "42,000 sq.ft.",
-    year: "2025",
-    description: "Aesthetic commercial hub utilizing a composite steel deck system, featuring custom painted RAL exterior flashings and noise-insulating roof systems.",
+    area: "40,000 sq.ft.",
+    year: "2020",
+    description:
+      "Complete fabrication and erection of a pre-engineered steel structure for the Tata Motors dealership and service facility in Indore. The project required a premium architectural finish combining PEB framing with custom facades to meet Tata Motors' brand standards.",
     highlights: [
-      "Composite metal deck slab architecture",
-      "Premium aesthetic finishes with concealed-fastener panels",
-      "Intergated sound-dampening polyolefin foam closers"
+      "Landmark automotive showroom and service complex in Indore",
+      "Custom fascia columns and architectural cladding to meet brand specifications",
+      "Fast-track erection aligned with dealership launch schedule",
     ],
     scope: [
-      "Custom flashing profiles and aesthetic trim manufacturing",
-      "Supply of galvanized metal deck sheets",
-      "On-site alignment supervision and crew training"
-    ]
+      "Primary frame design and fabrication",
+      "Custom fascia and front-face column structures",
+      "Complete cladding, roofing, and accessory supply and installation",
+    ],
   },
   {
-    id: "cold-storage-facility",
-    name: "Temperature-Controlled Cold Storage Plant",
-    location: "Gujarat, India",
-    client: "FreshFoods Logistics",
-    type: "PEB / Insulated Warehouse",
-    area: "60,000 sq.ft.",
-    year: "2024",
-    description: "High-efficiency cold storage facility designed to optimize thermal resistance, featuring specialized insulation panels, airtight closer strips, and high-tensile purlins.",
+    id: "transworld-terminal-mundra",
+    name: "Transworld Terminal Warehouse (WH-4)",
+    location: "Mundra, Gujarat, India",
+    client: "Transworld Terminal Pvt. Ltd.",
+    type: "Industrial PEB Warehouse",
+    area: "80,000 sq.ft.",
+    year: "2022",
+    description:
+      "Large-scale port-side warehousing facility at Mundra requiring high-performance PEB construction with superior corrosion resistance for the coastal environment. Infinity Fabtech designed, fabricated, and delivered the complete building system including Galvalume-coated cladding for long-term durability.",
     highlights: [
-      "Airtight envelope preventing thermal energy losses",
-      "Pre-punched base roofing clips for accelerated installation",
-      "Epoxy coated steel framing for moisture protection"
+      "Strategic port-side location demanding high corrosion resistance for all steel elements",
+      "Large clear-span design eliminating internal columns for maximum storage flexibility",
+      "Erection coordinated with active port logistics schedule — zero downtime",
     ],
     scope: [
-      "Primary framework fabrication and supply",
-      "Closed-cell cross-linked polyolefin foam strips supply",
-      "Site advisory on panel lap waterproofing"
-    ]
-  }
+      "Structural engineering and 3D frame analysis",
+      "Primary frame fabrication: built-up columns and tapered rafters",
+      "Supply and erection of cladding, insulation, gutters, and roofing accessories",
+    ],
+  },
+  {
+    id: "garg-warehouse-nemawar",
+    name: "Garg Warehouse",
+    location: "Nemawar, Madhya Pradesh, India",
+    client: "Garg Group",
+    type: "PEB Warehouse",
+    area: "30,000 sq.ft.",
+    year: "2023",
+    description:
+      "Complete design, fabrication, and erection of a Pre-Engineered Steel warehouse building for the Garg Group at Nemawar. The project demanded precision-engineered main frames and airtight roofing for agricultural commodity storage.",
+    highlights: [
+      "Wide-span clear interior for maximum unobstructed storage area",
+      "Airtight roofing system preventing rainwater ingress for commodity protection",
+      "Delivered and erected on schedule within the committed project timeframe",
+    ],
+    scope: [
+      "Primary frame design and factory fabrication",
+      "C & Z purlins, girts, and secondary structural members",
+      "Complete roofing, cladding, and accessory supply and erection",
+    ],
+  },
+  {
+    id: "dbl-central-warehouse-pithampur",
+    name: "DBL Central Warehouse",
+    location: "Pithampur, Madhya Pradesh, India",
+    client: "DBL (Dilip Buildcon Limited)",
+    type: "Large-Scale PEB Warehouse",
+    area: "1,00,000 sq.ft.",
+    year: "2019",
+    description:
+      "One of the largest single-project PEB warehouse structures executed by Infinity Fabtech — the DBL Central Warehouse at Pithampur industrial area. The project required phased fabrication and erection to align with the client's operational commissioning schedule.",
+    highlights: [
+      "Large-scale multi-bay PEB warehouse with heavy EOT crane provision",
+      "Phased erection schedule executed without disruption to adjacent site operations",
+      "Full structural engineering, fabrication, and erection managed in-house",
+    ],
+    scope: [
+      "Multi-bay structural design and engineering",
+      "Full factory fabrication of primary and secondary steel members",
+      "Complete erection including crane girder, cladding, roofing, and guttering",
+    ],
+  },
+  {
+    id: "shreyash-securities-indore",
+    name: "Shreyash Securities Warehouse Complex",
+    location: "Indore, Madhya Pradesh, India",
+    client: "Shreyash Securities Pvt. Ltd.",
+    type: "Commercial PEB Complex",
+    area: "1,20,000 sq.ft. (3 phases)",
+    year: "2015–2017",
+    description:
+      "Three-phase PEB warehouse complex for Shreyash Securities over three years — WC-1 (2015), WC-2 (2016), and WC-3 (2017). A flagship repeat-business project demonstrating Infinity Fabtech's reliability and quality consistency across multiple project phases.",
+    highlights: [
+      "Three-phase project executed over three consecutive years",
+      "Consistent quality and on-time delivery earning repeat business for all three phases",
+      "Wide-span design for clear storage and logistics operations",
+    ],
+    scope: [
+      "Structural design and fabrication for all three warehouse phases",
+      "Primary frames, purlins, cladding, and complete roofing system",
+      "Phased erection advisory and coordination support",
+    ],
+  },
+  {
+    id: "macleods-pharmaceuticals-sez",
+    name: "Macleods Pharmaceuticals SEZ Unit",
+    location: "Madhya Pradesh, India",
+    client: "Macleods Pharmaceuticals Ltd.",
+    type: "Pharmaceutical Grade PEB",
+    area: "45,000 sq.ft.",
+    year: "2019",
+    description:
+      "Specialized pre-engineered steel building for Macleods Pharmaceuticals within a Special Economic Zone. The project demanded strict cleanroom-compatible construction specifications, controlled surface finishes, and full compliance documentation for pharmaceutical GMP requirements.",
+    highlights: [
+      "GMP-compatible steel construction for pharmaceutical manufacturing environment",
+      "Full quality documentation, material test certificates, and structural compliance records",
+      "SEZ-compliant project execution with customs and regulatory coordination",
+    ],
+    scope: [
+      "Specialized structural engineering for pharmaceutical facility requirements",
+      "Factory fabrication with full traceability documentation",
+      "Complete building erection including clean cladding and insulation systems",
+    ],
+  },
+  {
+    id: "katariya-packaging-ratlam",
+    name: "Katariya Packaging Industrial Shed",
+    location: "Ratlam, Madhya Pradesh, India",
+    client: "Katariya Packaging",
+    type: "Industrial Factory PEB",
+    area: "25,000 sq.ft.",
+    year: "2023",
+    description:
+      "Industrial packaging factory PEB structure designed and erected for Katariya Packaging at Ratlam. The facility required robust structural framing to support machinery loading and a fast erection timeline to align with the plant commissioning schedule.",
+    highlights: [
+      "Heavy-duty structural design to accommodate industrial packaging machinery",
+      "Fast-track erection completed ahead of plant commissioning schedule",
+      "Economical wide-bay design minimizing internal columns to maximize floor utility",
+    ],
+    scope: [
+      "Custom structural engineering for industrial factory loading",
+      "Primary frame fabrication and secondary member supply",
+      "Complete building erection including roofing, cladding, and accessories",
+    ],
+  },
+  {
+    id: "hi-tech-metal-forming-indore",
+    name: "Hi-Tech Metal Forming Unit II",
+    location: "Indore, Madhya Pradesh, India",
+    client: "Hi-Tech Metal Forming Industries",
+    type: "Manufacturing Plant PEB",
+    area: "60,000 sq.ft.",
+    year: "2016",
+    description:
+      "Second expansion manufacturing plant for Hi-Tech Metal Forming Industries — a repeat project reflecting client confidence in Infinity Fabtech's quality and delivery capability. The facility houses heavy-production metal forming lines requiring crane bays and wide clear spans.",
+    highlights: [
+      "Repeat client project — Unit I (2015) and Unit II (2016) both executed by Infinity Fabtech",
+      "EOT crane bay provision integrated into structural design",
+      "Wide clear-span production hall eliminating obstructions for machinery layout",
+    ],
+    scope: [
+      "Crane bay structural design and frame fabrication",
+      "Gantry girder and rail system supply",
+      "Complete building erection including cladding, roofing, and industrial accessories",
+    ],
+  },
+  {
+    id: "associated-alcohol-badwah",
+    name: "Associated Alcohol Distillery Units",
+    location: "Badwah, Madhya Pradesh, India",
+    client: "Associated Alcohol & Breweries Ltd.",
+    type: "Industrial PEB (Multi-Phase)",
+    area: "Multi-phase",
+    year: "2014, 2016, 2018",
+    description:
+      "Three-phase industrial PEB project for Associated Alcohol & Breweries Ltd. at Badwah — Unit-I (2014), Unit-II (2016), and Unit-III (2018). This long-term repeat engagement demonstrates Infinity Fabtech's consistent performance over a decade and our ability to support phased industrial expansion.",
+    highlights: [
+      "Three-phase industrial expansion over four years — consistent quality across all phases",
+      "Structural designs adapted for distillery process loading and heavy equipment",
+      "Long-term client relationship reflecting trust and delivery reliability",
+    ],
+    scope: [
+      "Phase-wise structural engineering and fabrication for each unit",
+      "Primary and secondary members for high-load industrial applications",
+      "Erection support and quality supervision for all three project phases",
+    ],
+  },
 ];
 
 export const projectsPageContent = {
   hero: {
     badge: "Our Portfolio",
-    title: "Completed Projects & Case Studies",
-    description: "Showcasing our precision engineering, high-capacity fabrication, and structural execution for warehousing, industrial foundry, and commercial sites."
+    title: "500+ Projects Built Across India",
+    description:
+      "From government PSU facilities and pharmaceutical SEZ units to automotive showrooms and multi-phase industrial expansions — Infinity Fabtech has built over 5.2 million sq.ft. of Pre-Engineered Steel Buildings across India.",
   },
   callout: {
-    title: "Planning a Pre-Engineered Building Project?",
-    description: "Get in touch with our engineering desk to review your structural drawings, optimize steel weight, and receive a competitive fabrication and supply estimate.",
-    buttonLabel: "Consult Our Engineers"
-  }
+    title: "Planning a New Building? Get a Project Quote.",
+    description:
+      "Share your project requirements with our engineering desk. We will review your site conditions, span requirements, and load specifications — and provide a detailed quotation covering design, fabrication, and erection.",
+    buttonLabel: "Request a Quote",
+  },
 };
+
+export const clientsList = [
+  "Atma Malik Dhyanpeeth, Shirdi, Shahpur, Nerla",
+  "Belmaks Metal India Ltd.",
+  "Bhagirath Coach & Metal Fabricators Pvt. Ltd., Pithampur",
+  "Bhagirath Motors, Ujjain",
+  "Metal Profile Unit II (2016)",
+  "Metal Profile Unit III (2018)",
+  "Hi-Tech Metal Forming Unit I (2015)",
+  "Hi-Tech Metal Forming Unit II (2016)",
+  "Prestige Foods Industries",
+  "Transworld Terminal Pvt. Ltd. — Mundra",
+  "TG Terminal — Mundra",
+  "Transworld Terminal Pvt. Ltd. — Kolkata",
+  "Shreyash Securities Pvt. Ltd. — WC-1 (2015)",
+  "Shreyash Securities Pvt. Ltd. — WC-2 (2016)",
+  "Shreyash Securities Pvt. Ltd. — WC-3 (2017)",
+  "Anant Agro, Indore (2016 & 2018)",
+  "Shyam Automotive-I, Indore (2016)",
+  "Shyam Automotive-II, Indore (2018)",
+  "ALIMCO Auxiliary Production Center, Ujjain",
+  "Flexi Flex, Indore (2015)",
+  "Inno Flex & Opal Wear, Indore (2016)",
+  "MD Enterprises, Pithampur",
+  "Associated Alcohol, Unit-I, Badwah (2014)",
+  "Associated Alcohol, Unit-II, Badwah (2016)",
+  "Associated Alcohol, Unit-III, Badwah (2018)",
+  "Gold Star (WH-I, II, III, IV, V)",
+  "Katariya Packaging, Ratlam",
+  "Fortune Stone Limited (I & II), Chatterpur",
+  "IPCA, Ratlam",
+  "Shyam Indofab (P) Ltd., Amravati",
+  "Ajmera Metals, Indore",
+  "MB Jigson Hydraulics Pvt. Ltd., Indore",
+  "Jalpa Devi Engineering Pvt. Ltd. (2019)",
+  "DBL Central Warehouse, Pithampur (2019)",
+  "Deevin Seismic Systems Pvt. Ltd. (2019)",
+  "Macleods Pharmaceuticals Ltd. — SEZ Unit (2019)",
+];

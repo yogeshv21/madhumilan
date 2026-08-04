@@ -59,11 +59,7 @@ export default function CompanyOverview() {
               </h2>
             </div>
 
-            <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed">
-              {companyConfig.shortDescription}
-            </p>
-
-            <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
+            <p className="text-base text-slate-650 dark:text-slate-300 leading-relaxed">
               {companyConfig.history}
             </p>
 

@@ -6,31 +6,31 @@ export const products: Product[] = [
     name: "Pre-Engineered Steel Buildings (PEB)",
     category: "Buildings",
     shortDescription: "Custom-designed, highly durable, and rapid-erection steel building systems engineered to international standards.",
-    fullDescription: "Madhu Ratna Industry's Pre-Engineered Steel Buildings (PEB) are completely custom-designed steel structures engineered by our experienced design desk using advanced software like SAP2000 and Tekla. Ideal for industrial warehouses, large manufacturing factories, aircraft hangars, commercial showrooms, and multi-story offices, our PEBs optimize material usage while ensuring maximum durability, faster project cycle times, and easy on-site bolted assembly.",
+    fullDescription: "Infinity Fabtech Pvt. Ltd.'s Pre-Engineered Steel Buildings (PEB) are tailor-made solutions to a customer's needs — completely custom-designed to meet exact requirements. These buildings are flexible, easily expandable, and low maintenance cost. Engineered using specialised 3D wireframe analysis software, our PEBs convert complex conventional steel building designs into simpler, economical pre-engineered solutions — suitable for warehouses, factories, aircraft hangars, cold storages, workshops, sport halls, high rise buildings, supermarkets, and automobile industries.",
     image: "/images/products/peb-building.png",
     images: [
       "/images/products/peb-building.png",
       "/images/products/peb-detail.png"
     ],
     features: [
-      "Built with high-tensile structural steel (Grade 345 MPa / 50 ksi)",
-      "Optimized design utilizing tapered built-up main frames and cold-formed secondary members",
-      "Flexible spans up to 80m clear span without internal columns",
-      "Integrated crane support systems, mezzanines, and fascia walls",
-      "Engineered compliance with local building codes, wind loads, and seismic zones"
+      "Larger spans — up to 60 metres without any columns in between",
+      "Faster construction — PEB saves 50% construction time; a 30,000 sq.ft. building ready in 10–12 weeks",
+      "Tapered built-up main frames and cold-formed C & Z secondary members for optimised steel weight",
+      "EOT crane systems, mezzanine floors, and industrial accessories integrated by design",
+      "Designed to MBMA, AISC, AISI, IS-800:2007, IS-875, IS-1893, and IS:801 standards"
     ],
     benefits: [
-      "Slashes construction time by up to 50% compared to conventional concrete or site-fabricated structures",
-      "Cost-efficient design reduces steel weight and foundation costs",
-      "Flexible and easily expandable for future extensions",
-      "Low maintenance costs with high weather, fire, and corrosion resistance"
+      "Single-source responsibility — design, fabrication, logistics, and erection advisory under one roof",
+      "Re-locatable — PEB permits future expansion and relocation through easy dismantling and reassembling",
+      "Cost effective — optimum utilisation of materials reduces direct and indirect costs including foundation cost",
+      "Peace of mind guaranteed — reputed, reliable manufacturer undertaking turn-key responsibility",
     ],
     specifications: {
       "Design Standards": "MBMA, AISC, IS 800",
       "Primary Members": "Built-up columns and rafters (ASTM A572 Gr. 50)",
       "Secondary Members": "C & Z purlins and girts (275 GSM galvanized steel)",
       "Cladding Options": "Single-skin profile sheets or insulated sandwich panels (PUF, Rockwool, EPS)",
-      "Clear Span Capacity": "Up to 90 meters",
+      "Clear Span Capacity": "Up to 60 metres without internal columns",
       "Erection Connections": "High-strength bolts (Grade 8.8 / 10.9)"
     },
     applications: [
@@ -84,7 +84,7 @@ export const products: Product[] = [
     name: "Smart Industrial Storage & Racking Solutions",
     category: "Storage",
     shortDescription: "High-density warehouse racking systems, mezzanines, and multi-tier shelving systems for modern logistics.",
-    fullDescription: "Madhu Ratna Industry designs, manufactures, and installs high-density warehouse storage systems engineered to maximize storage capacity and streamline logistics workflows. From heavy-duty selective pallet racking and drive-in racks to structural steel mezzanines and multi-tier shelving, our storage solutions are built with high-yield strength steel profiles to ensure safe, scalable, and durable operations.",
+    fullDescription: "Infinity Fabtech Pvt. Ltd. designs, manufactures, and installs high-density warehouse storage systems engineered to maximize storage capacity and streamline logistics workflows. From heavy-duty selective pallet racking and drive-in racks to structural steel mezzanines and multi-tier shelving, our storage solutions are built with high-yield strength steel profiles to ensure safe, scalable, and durable operations.",
     image: "/images/products/storage-racking.png",
     images: [
       "/images/products/storage-racking.png",
@@ -123,7 +123,7 @@ export const products: Product[] = [
     name: "Standing Seam Roofing Clips (SSR Clips)",
     category: "Accessories",
     shortDescription: "High-load capacity metal clips engineered for thermal expansion and secure roof panel interlocking.",
-    fullDescription: "Madhu Ratna Industry's Standing Seam Roofing Clips (SSR Clips) are designed to provide maximum uplift resistance and secure structural attachment for standing seam metal roof systems. Available in fixed and sliding designs, these clips accommodate the natural thermal expansion and contraction of roofing sheets without compromising structural integrity. Galvanized and Stainless Steel choices ensure zero corrosion over decades of exposure.",
+    fullDescription: "Infinity Fabtech Pvt. Ltd.'s Standing Seam Roofing Clips (SSR Clips) are designed to provide maximum uplift resistance and secure structural attachment for standing seam metal roof systems. Available in fixed and sliding designs, these clips accommodate the natural thermal expansion and contraction of roofing sheets without compromising structural integrity. Galvanized and Stainless Steel choices ensure zero corrosion over decades of exposure.",
     image: "/images/products/ssr-clips.png",
     images: [
       "/images/products/ssr-clips.png",
@@ -201,7 +201,7 @@ export const products: Product[] = [
     name: "Roofing Accessories",
     category: "Accessories",
     shortDescription: "Ridge caps, metal flashings, gutters, and matching structural trims for complete roof systems.",
-    fullDescription: "Madhu Ratna Industry manufactures a full line of steel flashing and trim accessories to complement your standing seam and trapezoidal roofing installations. From ridge caps and gable flashings to valley gutters and drip edges, our accessories are fabricated from the same high-tensile pre-painted zinc-aluminum steel as your panels, ensuring perfect color matches and long-term durability.",
+    fullDescription: "Infinity Fabtech Pvt. Ltd. manufactures a full line of steel flashing and trim accessories to complement your standing seam and trapezoidal roofing installations. From ridge caps and gable flashings to valley gutters and drip edges, our accessories are fabricated from the same high-tensile pre-painted zinc-aluminum steel as your panels, ensuring perfect color matches and long-term durability.",
     image: "/images/products/roofing-accessories.png",
     images: [
       "/images/products/roofing-accessories.png",
@@ -278,7 +278,7 @@ export const products: Product[] = [
     name: "Industrial Roofing Components",
     category: "Components",
     shortDescription: "Custom metal brackets, anchor plates, expansion joints, and structural structural components.",
-    fullDescription: "Madhu Ratna Industry supplies specialized metallic components supporting heavy industrial roofing systems. This includes custom sag rods, flange braces, deck hanger brackets, purlin clips, and expansion joint sub-girts. Fabricated in-house on high-tonnage progressive presses, these parts deliver consistent quality and strict conformance to PEB designs.",
+    fullDescription: "Infinity Fabtech Pvt. Ltd. supplies specialized metallic components supporting heavy industrial roofing systems. This includes custom sag rods, flange braces, deck hanger brackets, purlin clips, and expansion joint sub-girts. Fabricated in-house on high-tonnage progressive presses, these parts deliver consistent quality and strict conformance to PEB designs.",
     image: "/images/products/industrial-components.png",
     images: [
       "/images/products/industrial-components.png",

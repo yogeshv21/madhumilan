@@ -1,105 +1,126 @@
 export const landingContent = {
   hero: {
-    trustBadge: "",
+    trustBadge: "We Build Trust Since 2008",
     headline: {
-      part1: "Pre-Engineered Steel Buildings",
-      part2: "& Heavy Structural Steel",
-      part3: "Systems"
+      part1: "Pre-Engineered",
+      part2: "Steel Building",
+      part3: "Solutions",
     },
-    description: "Global leaders in the engineering, fabrication, and supply of custom steel buildings, structural steel frames, and smart warehouse racking systems. Built for structural longevity and rapid bolted site erection.",
+    description:
+      "Infinity Fabtech Pvt. Ltd. is a leading pre-engineered steel buildings manufacturing company. Within a short span of 11 years, we have built over 5.2 million square feet of buildings and completed 500+ projects across India.",
     primaryCta: "Request a Quote",
-    secondaryCta: "Explore Solutions",
+    secondaryCta: "Explore Buildings",
     highlights: [
-      { value: "18+ Years", label: "Structural Leadership" },
-      { value: "AISC & MBMA", label: "Design Conformance" },
-      { value: "75,000+ MT", label: "Annual Fabrication Capacity" }
-    ]
+      { value: "11+ Years", label: "of Experience" },
+      { value: "500+ Projects", label: "Completed" },
+      { value: "5.2M+ Sq. Ft.", label: "Built Across India" },
+    ],
   },
   companyOverview: {
     badge: "Corporate Profile",
-    title: "Engineering Integrity Since 2008",
-    learnMoreLabel: "Learn More About Our Facility",
-    footprintTitle: "Manufacturing Footprint",
+    title: "Building Trust Since 2008",
+    learnMoreLabel: "Learn More About Us",
+    footprintTitle: "Pan-India Footprint",
     certifications: [
-      "Quality Certification Registry",
-      "AS3566 Class-3 & Class-4 Fastener Conformance"
-    ]
+      "MBMA, AISC & AISI Standards Compliant",
+      "IS-800, IS-875, IS-1893 Standard Adherence",
+    ],
   },
   whyChooseUs: {
     badge: "Value Proposition",
-    title: "Why PEB Engineers & Architects Specify Madhu Ratna",
-    description: "We merge premium raw materials, automated precision stamping, and rigorous lab inspections to deliver roofing products that outperform standard accessories."
+    title: "Why Leading Industries Choose Infinity Fabtech",
+    description:
+      "From design to handover — single-source responsibility means faster timelines, lower cost, and guaranteed quality at every stage of your Pre-Engineered Building project.",
   },
   productApplications: {
-    badge: "Field Implementations",
-    title: "Engineered for Demanding Construction Environments",
-    description: "Our products are installed in critical points across steel constructions to guarantee water tightness and mechanical structural safety.",
+    badge: "Applications",
+    title: "PEB Solutions for Every Industry",
+    description:
+      "Infinity Fabtech PEB structures are custom-designed for a wide range of industrial and commercial applications — flexible, expandable, and built to last.",
     applications: [
       {
-        title: "Pre-Engineered Buildings (PEB)",
-        desc: "Securing high-span metal sheets with thermal expansion clips onto structural frame purlins.",
-        icon: "Building"
+        title: "Industrial Sheds & Factories",
+        desc: "Robust wide-span PEB structures for manufacturing plants, heavy fabrication units, and processing facilities with optional EOT crane provision.",
+        icon: "Building",
       },
       {
-        title: "Cold Storage & Cleanrooms",
-        desc: "Creating airtight side-lap boundary locks with high-density polyolefin foam strips.",
-        icon: "Snowflake"
+        title: "Warehouses & Distribution Centers",
+        desc: "Clear-span warehouses enabling maximum unobstructed storage — a 30,000 sq.ft. building ready for occupation in just 10–12 weeks.",
+        icon: "Minimize2",
       },
       {
-        title: "Heavy Industrial Factories",
-        desc: "Anti-vibration structural anchors and heavy-gauge fasteners that resist operational stress.",
-        icon: "Shield"
+        title: "Cold Stores & Food Processing",
+        desc: "Thermally insulated PEB structures with Galvalume cladding and natural ventilation for perishable goods storage and food-grade environments.",
+        icon: "Snowflake",
       },
       {
-        title: "Aviation & Large Hangars",
-        desc: "Wind-uplift-resistant clip profiling supporting massive continuous roll-formed roof sheets.",
-        icon: "Plane"
+        title: "Automotive Showrooms & Service Centers",
+        desc: "Architecturally finished PEB structures with custom facades, large framed openings, and brand-compliant exterior treatments for automotive dealers.",
+        icon: "Plane",
       },
       {
-        title: "Expansion Joint Sub-Girts",
-        desc: "Accommodating large movement planes at structural seismic dividers.",
-        icon: "Minimize2"
+        title: "Aircraft Hangars & Transport Terminals",
+        desc: "Wind-uplift-resistant, column-free clear spans up to 60 metres for aircraft hangars, logistics hubs, railway sheds, and transport terminals.",
+        icon: "Shield",
       },
       {
-        title: "Suspension Hanger Brackets",
-        desc: "Securing heavy electrical trays and ventilation duct lines underneath metal roof decks.",
-        icon: "Anchor"
-      }
-    ]
+        title: "Schools, Sports Halls & Institutions",
+        desc: "Cost-effective PEB construction for auditoriums, sports complexes, exhibition halls, convention centres, food courts, and educational institutions.",
+        icon: "Anchor",
+      },
+    ],
   },
   manufacturingExcellence: {
     badge: "Operational Standard",
-    title: "Modern Infrastructure & Continuous Quality Controls",
-    qaTitle: "Our ISO Quality Assurance Checklist",
+    title: "65,000 Sq.Ft. State-of-the-Art Manufacturing Facility",
+    qaTitle: "Our Engineering & Quality Process",
     qaChecklist: [
-      { step: "01", label: "Raw Material Verification", desc: "Chemical compositions verification & mechanical yield testing of steel and polymers." },
-      { step: "02", label: "In-Process Dimensions Audit", desc: "Continuous micro-meter callout audits on progressive metal dies." },
-      { step: "03", label: "Accelerated Stress Testing", desc: "500-hour salt-spray salt chamber runs and vertical pull-out stress testing." },
-      { step: "04", label: "Batch Traceability Tagging", desc: "Unique serial printing to trace raw inputs and mechanical parameters." }
-    ]
+      {
+        step: "01",
+        label: "Planning & Design",
+        desc: "3D wireframe analysis and computerised structural design using specialised software — converting complex conventional designs into optimised PEB solutions.",
+      },
+      {
+        step: "02",
+        label: "Fabrication & Q.C.",
+        desc: "CNC plasma cutting, sub-arc H-beam welding, C & Z purlin forming, and sheeting — with sophisticated nesting software for highest accuracy and zero wastage.",
+      },
+      {
+        step: "03",
+        label: "Surface Treatment",
+        desc: "Shot blasting to SA-2.5 standards, followed by primer plus two coats of enamel or epoxy finish applied by airless strain-less painting machine.",
+      },
+      {
+        step: "04",
+        label: "Transport, Erection & Handover",
+        desc: "Site-sequenced dispatch, erection advisory, alignment checks, and final quality audit before project handover.",
+      },
+    ],
   },
   servicesOverview: {
-    badge: "Value Additions",
-    title: "Technical Consultation & Logistics Support",
+    badge: "End-to-End Services",
+    title: "Design, Fabricate, Deliver & Erect",
     exploreLabel: "Explore Services",
-    consultationLabel: "Consultation Desk",
-    viewBenefitsLabel: "View Benefits"
+    consultationLabel: "Talk to Our Engineers",
+    viewBenefitsLabel: "View Benefits",
   },
   projectsOverview: {
-    badge: "Case Studies",
-    title: "Completed Engineering Projects",
-    allBuildsLabel: "All Completed Builds",
-    detailsLabel: "Project Details"
+    badge: "Our Portfolio",
+    title: "500+ Projects Built Across India",
+    allBuildsLabel: "View All Projects",
+    detailsLabel: "Project Details",
   },
   testimonials: {
     badge: "Client Success",
-    title: "Trusted by Major Pre-Engineered Building Contractors",
-    description: "Read what general contractors, project managers, and lead structural engineers say about our roofing components quality and logistics support."
+    title: "Trusted by Major Industries & Institutions Across India",
+    description:
+      "From government PSUs and pharmaceutical companies to automotive giants and logistics operators — our clients return because we deliver on our commitments.",
   },
   requestQuoteCta: {
-    title: "Need a Custom Pre-Engineered Building or Structural Steel System?",
-    description: "Submit your project requirements to our structural engineering desk today. We offer custom span configurations, material grade selections, and detailed pricing packages for contractors and developers.",
-    primaryButton: "Request Custom Quotation",
-    secondaryButton: "Get In Touch"
-  }
+    title: "Plan Your Next Building With Infinity Fabtech",
+    description:
+      "Share your project requirements — site dimensions, intended use, span requirements, and load conditions — and our engineering desk will respond with a detailed proposal covering design, fabrication, and erection.",
+    primaryButton: "Request a Quote",
+    secondaryButton: "Contact Us",
+  },
 };

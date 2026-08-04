@@ -242,13 +242,16 @@ export default function QuoteModal() {
                         {...register("productRequirement")}
                         className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-855/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs appearance-none cursor-pointer"
                       >
-                        <option value="">Select Category</option>
-                        <option value="standing-seam-roofing-clips">Standing Seam Roofing Clips (SSR Clips)</option>
-                        <option value="foam-closer-strips">Foam Closer Strips</option>
-                        <option value="roofing-accessories">Roofing Accessories (Ridge Caps, Trims)</option>
-                        <option value="industrial-fasteners">Industrial Fasteners / Screws</option>
-                        <option value="industrial-roofing-components">Industrial Roofing Components (Brackets)</option>
-                        <option value="general-inquiry">General Cladding / Custom Fabrications</option>
+                        <option value="">Select Building / Service Type</option>
+                        <option value="peb-buildings">Pre-Engineered Steel Buildings (PEB)</option>
+                        <option value="warehouse">Industrial Warehouse / Storage Shed</option>
+                        <option value="factory">Factory / Manufacturing Plant</option>
+                        <option value="cold-store">Cold Storage / Food Processing Facility</option>
+                        <option value="hangar">Aircraft Hangar / Large Span Structure</option>
+                        <option value="commercial">Commercial / Showroom / Institutional Building</option>
+                        <option value="structural-steel">Heavy Structural Steel</option>
+                        <option value="accessories">PEB Accessories & Components</option>
+                        <option value="other">Other / General Enquiry</option>
                       </select>
                       <div className="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-slate-400">
                         <svg className="w-4 h-4 fill-current" viewBox="0 0 20 20">

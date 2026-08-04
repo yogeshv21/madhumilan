@@ -3,75 +3,82 @@ import { Service } from "@/types/service";
 export const services: Service[] = [
   {
     id: "structural-design-engineering",
-    title: "Structural Detailing & Design",
-    description: "Advanced engineering & detailing for high-efficiency PEB and structural steel frames complying with global design standards.",
+    title: "Structural Design & Engineering",
+    description:
+      "Full structural engineering for Pre-Engineered Steel Buildings using specialised 3D wireframe analysis software. We convert complex conventional steel building designs into simpler, economical, and optimised PEB solutions — without sacrificing utility or function.",
     iconName: "Compass",
     benefits: [
-      "SAP2000, STAAD.Pro & Tekla detailing",
-      "Strict conformance to international structural building codes",
-      "3D detailing for accurate fabrication",
-      "Value engineering to optimize total steel weight"
-    ]
+      "3D wireframe structural analysis and computerised engineering design",
+      "Custom developed analysis complying with MBMA, AISC, AISI, IS-800, IS-875, IS-1893",
+      "Value engineering to optimise steel weight and reduce foundation costs",
+      "Detailed fabrication drawings and erection GA sheets for seamless production",
+    ],
   },
   {
     id: "precision-fabrication",
-    title: "Advanced Factory Fabrication",
-    description: "High-capacity automated fabrication using plasma cutting, H-beam assembly, and certified deep-penetration SAW welding lines.",
+    title: "Factory Fabrication",
+    description:
+      "High-capacity automated fabrication in our 65,000 sq.ft. plant at Indore using CNC plasma cutting, sub-arc H-beam welding, C & Z purlin forming lines, sheeting machines, and curve profile machines — with sophisticated nesting software for maximum accuracy and minimal wastage.",
     iconName: "CheckSquare",
     benefits: [
-      "Sub-millimeter fabrication tolerances",
-      "Certified SAW welding for uniform joints",
-      "Shot blasting to Sa 2.5 profile standard",
-      "Corrosion-resistant epoxy or HDG coatings"
-    ]
+      "CNC plasma profile cutting for precise sub-millimetre fabrication",
+      "Sub-arc continuous H-beam welding station for certified weld quality",
+      "Shot blasting to SA-2.5 standards and airless spray primer + epoxy finish",
+      "Separate two assembly and production lines with 10+ fitting stations",
+    ],
   },
   {
     id: "fast-track-logistics",
-    title: "Sequenced Shipping & Logistics",
-    description: "Chronologically sequenced packaging and shipping routed to deliver fabricated steel structures ready for immediate on-site bolted erection.",
+    title: "Site-Sequenced Dispatch & Logistics",
+    description:
+      "All fabricated PEB members are clearly marked and dispatched in site erection sequence — enabling the erection team to directly bolt together the structure without sorting delays. Export-grade packaging protects coatings during transit.",
     iconName: "Truck",
     benefits: [
-      "Export-grade packaging to protect coatings",
-      "Site-sequenced loading schedules",
-      "Full packing lists and clear part markings",
-      "Seamless multi-modal customs coordination"
-    ]
+      "Site-sequenced loading ensuring members arrive in erection order",
+      "Clear part markings and comprehensive packing lists with every dispatch",
+      "Pan-India delivery network covering all major industrial zones",
+      "Coordinated multi-truck dispatch for large building projects",
+    ],
   },
   {
     id: "erection-supervision",
-    title: "Site Support & Erection Advisory",
-    description: "Direct technical guidance and site advisors for assembly, alignment, connection torque audits, and standing seam roof installation.",
+    title: "Erection Advisory & Site Support",
+    description:
+      "Infinity Fabtech provides direct technical guidance and site advisory for assembly, column alignment, connection torque audits, and roofing installation. Our team supports general contractors to ensure safe, correct, and fast erection of the PEB structure.",
     iconName: "Wrench",
     benefits: [
-      "On-site guidance for general contractors",
-      "Rigging plans and alignment verification",
-      "Double-lock seaming equipment and training",
-      "Final torque connection audits before signoff"
-    ]
+      "On-site guidance for general contractors and local erection crews",
+      "Column alignment verification and anchor bolt checking",
+      "Connection torque audits before structural sign-off",
+      "Roofing, cladding, and gutter installation advisory",
+    ],
   },
   {
-    id: "custom-components",
-    title: "Custom Steel Accessories",
-    description: "Roll-formed panels, custom flashings, gutters, and structural accessories tailored for custom architectural and cladding needs.",
+    id: "custom-building-components",
+    title: "Custom PEB Components & Accessories",
+    description:
+      "Beyond the primary frame, Infinity Fabtech supplies all secondary and accessory components — C & Z purlins, girts, sag rods, bracing systems, ridge and eave gutters, turbo vents, skylights, mezzanine systems, and framed windows and doors.",
     iconName: "Building2",
     benefits: [
-      "Custom components (sag rods, deck hangers)",
-      "Standard and custom roll-formed profiles",
-      "Fittings and gutters up to 6.0m length",
-      "Rapid turnaround on custom fabrication tooling"
-    ]
-  }
+      "Complete PEB component supply: purlins, girts, bracing, and sag rods",
+      "Ridge vents, turbo vents, and skylight systems",
+      "Mezzanine floor systems and gantry girder and rails",
+      "Framed windows and doors, canopies, and anchor bolt sets",
+    ],
+  },
 ];
 
 export const servicesPageContent = {
   hero: {
-    badge: "Our Offerings",
-    title: "Consultation, Supply & Support Services",
-    description: "From design blueprints to double-lock standing seam seaming training, we provide end-to-end support for your roofing teams."
+    badge: "Our Services",
+    title: "End-to-End PEB Building Services",
+    description:
+      "From structural engineering and factory fabrication to pan-India logistics and erection advisory — Infinity Fabtech delivers complete Pre-Engineered Steel Buildings under single-source responsibility.",
   },
   callout: {
-    title: "Need Site Erection Training Support?",
-    description: "Our technical assistance teams are available to travel to major construction sites in India and the MEA region to train local crews on correct fastening torque values and profile overlaps.",
-    buttonLabel: "Request On-Site Assistance"
-  }
+    title: "Need a Complete Building Solution?",
+    description:
+      "Our engineering and sales desk is available to discuss your project requirements, review site conditions, and propose the most cost-effective PEB solution for your needs.",
+    buttonLabel: "Talk to Our Engineers",
+  },
 };

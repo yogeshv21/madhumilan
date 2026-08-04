@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Calendar, MapPin, SquareStack, CheckCircle2, ChevronRight, Briefcase } from "lucide-react";
 import { projects, projectsPageContent } from "@/data/projects";
 import { constructMetadata } from "@/lib/metadata";
+import IndiaMapWrapper from "@/components/projects/IndiaMapWrapper";
 
 export const metadata: Metadata = constructMetadata({
   title: "Completed PEB & Steel Projects",
@@ -33,6 +34,11 @@ export default function ProjectsPage() {
             {content.hero.description}
           </p>
         </div>
+      </section>
+
+      {/* Interactive India Map */}
+      <section className="mt-16 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <IndiaMapWrapper />
       </section>
 
       {/* Projects Grid Section */}

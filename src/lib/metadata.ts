@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export function constructMetadata({
-  title = "Precision Roofing SSR Clips & Foam Closers",
-  description = "Premium manufacturer and supplier of standing seam clips, foam closer strips, fasteners, and PEB roofing components. Certified premium quality.",
-  image = "/images/products/ssr-clips.png",
+  title = "Pre-Engineered Steel Building Manufacturer",
+  description = "Infinity Fabtech Pvt. Ltd. — leading manufacturer and erector of Pre-Engineered Steel Buildings in India. 500+ projects, 5.2 million sq.ft. built across India since 2008. Based in Indore, M.P.",
+  image = "/images/products/peb-building.png",
   noIndex = false,
   slug = "",
 }: {
@@ -13,29 +13,30 @@ export function constructMetadata({
   noIndex?: boolean;
   slug?: string;
 } = {}): Metadata {
-  const siteUrl = "https://www.madhuratna.com";
+  const siteUrl = "https://www.infinityfabtech.com";
   const fullUrl = slug ? `${siteUrl}/${slug}` : siteUrl;
-  const siteName = "Madhu Ratna Industry";
+  const siteName = "Infinity Fabtech Pvt. Ltd.";
   const finalTitle = slug ? `${title} | ${siteName}` : `${siteName} | ${title}`;
 
   return {
     title: finalTitle,
     description,
     keywords: [
-      "Standing Seam Clips",
-      "SSR Clips",
-      "Foam Closer Strips",
-      "EPDM Foam Closers",
-      "Roofing Accessories",
-      "Industrial Fasteners",
-      "PEB Roofing Components",
-      "Roofing Sheet Clips Gujarat",
-      "Madhu Ratna Industry Ahmedabad",
-      "Metal Roofing Fasteners India",
+      "Pre-Engineered Steel Buildings",
+      "PEB Manufacturer India",
+      "PEB Building Indore",
+      "Steel Building Manufacturer Madhya Pradesh",
+      "Infinity Fabtech Pvt. Ltd.",
+      "Industrial Warehouse PEB",
+      "Factory Steel Building India",
+      "PEB Construction Indore",
+      "Steel Warehouse Manufacturer",
+      "Pre-Engineered Building Solutions India",
+      "Industrial Shed Manufacturer Indore",
     ],
-    authors: [{ name: "Madhu Ratna Industry" }],
-    creator: "Madhu Ratna Industry",
-    publisher: "Madhu Ratna Industry",
+    authors: [{ name: "Infinity Fabtech Pvt. Ltd." }],
+    creator: "Infinity Fabtech Pvt. Ltd.",
+    publisher: "Infinity Fabtech Pvt. Ltd.",
     metadataBase: new URL(siteUrl),
     alternates: {
       canonical: fullUrl,
@@ -60,7 +61,7 @@ export function constructMetadata({
       title: finalTitle,
       description,
       images: [image],
-      creator: "@madhuratnaind",
+      creator: "@infinityfabtech",
     },
     robots: {
       index: !noIndex,

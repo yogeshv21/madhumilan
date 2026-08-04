@@ -9,19 +9,21 @@ import ManufacturingExcellence from "@/components/home/ManufacturingExcellence";
 import ProductApplications from "@/components/home/ProductApplications";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import RequestQuoteCTA from "@/components/home/RequestQuoteCTA";
+import RoofExplorer from "@/components/home/RoofExplorer";
 
 export default function Home() {
   return (
     <>
       <Hero />
       <CompanyOverview />
+      <RoofExplorer />
       <FeaturedProducts />
       <ServicesOverview />
       <WhyChooseUs />
       <ProjectsOverview />
       <ManufacturingExcellence />
       <ProductApplications />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <RequestQuoteCTA />
     </>
   );

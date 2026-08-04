@@ -13,7 +13,7 @@ export default function ProductDetailsActions({ slug, name }: { slug: string; na
     openQuote();
   };
 
-  const whatsappMessage = `Hello Madhu Ratna Industry, I would like to request pricing for "${name}".`;
+  const whatsappMessage = `Hello Infinity Fabtech Pvt. Ltd., I would like to request pricing for "${name}".`;
 
   return (
     <div className="flex flex-col sm:flex-row gap-4">

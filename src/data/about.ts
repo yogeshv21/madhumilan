@@ -1,37 +1,89 @@
 export const aboutContent = {
   hero: {
-    badge: "Enterprise Profile",
-    title: "About Madhu Ratna Industry",
-    description: "Leading the manufacturing and delivery of high-integrity pre-engineered metal roofing parts, weather-proof foam profiles, and heavy fastening systems."
+    badge: "Company Profile",
+    title: "About Infinity Fabtech Pvt. Ltd.",
+    description:
+      "A pre-engineered steel buildings manufacturing company with 11+ years of experience, building over 5.2 million square feet of structures and delivering over 500+ projects with an unwavering commitment to quality, commitment, and trust.",
   },
   journey: {
-    title: "Our Corporate Journey"
+    title: "Our Corporate Journey",
+    paragraphs: [
+      "Infinity Fabtech Pvt. Ltd. is a pre-engineered steel buildings manufacturing company. The company, founded in 2008, began as a Pre fab steel structure company called Infinity Steel Works. After gaining significant experience in the industry and following the construction trends in the country, the promoters established Infinity Fabtech Pvt. Ltd. Company, which commenced operation in 2016.",
+      "Within a short span of 11 years, we have built over 5.2 million square feet of buildings at various locations in India and over 500+ projects representing a wide variety of structures and virtually every type of industry. Timely completion and professional execution are the hallmark of the company. We believe in delivering on our commitments. This is why our clients reward us with so much repeat business - over 65% of our projects come from existing clients who have confidence in our ability to meet their expectations without compromising on quality.",
+      "Our growth in the last 11 years of service has been recognized and awarded on several occasions. We are proud and happy for the same and are working to attain higher positions and recognition in global construction sectors. We are expanding our marketing and production facility across India to emerge as a global construction company. We are the company that is more referred, preferred, and recommended by consultants, architects, builders, and clients. We ensure you the best quality steel building with the highest value for every penny of investment. We are Infinity — we stand for quality, commitment, and trust.",
+    ],
   },
   values: {
     badge: "Company Culture",
-    title: "The Principles That Guide Our Manufacturing"
+    title: "The Principles That Guide Our Work",
   },
   infrastructure: {
-    badge: "Factory Assets",
-    title: "High-Capacity Stamping & Extrusion Plant"
+    badge: "Manufacturing Facility",
+    title: "65,000 Sq.Ft. State-of-the-Art Plant at Indore",
   },
   process: {
-    badge: "Workflow Lifecycle",
-    title: "End-to-End Precision Fabrication Process",
-    description: "From design reviews to final dispatch, our process ensures absolute adherence to engineering tolerance requirements.",
+    badge: "Project Lifecycle",
+    title: "End-to-End PEB Project Process",
+    description:
+      "From planning and design approval to factory production, transportation, erection, and final handover — our lifecycle ensures complete accountability and on-time delivery at every stage.",
     steps: [
-      { step: "01", label: "Tooling & Die Design", desc: "CAD/CAM blueprint design of progressive dies and extrusion molds for custom profiles." },
-      { step: "02", label: "Material Sourcing", desc: "Receiving certified high-tensile steel coils and UV-stabilized chemical granules." },
-      { step: "03", label: "Automated Stamping", desc: "Continuous progressive press lines fabricating clips and brackets with zero deviation." },
-      { step: "04", label: "Testing & Assembly", desc: "Subjecting batches to load limits and corrosion tests before packing for dispatch." }
-    ]
+      {
+        step: "01",
+        label: "Planning Stage",
+        desc: "Understanding the client's requirements, site conditions, load specifications, and budget — followed by feasibility analysis and concept design.",
+      },
+      {
+        step: "02",
+        label: "Design & Approval",
+        desc: "3D wireframe structural analysis using specialised software, followed by engineering drawings, client approval, and fabrication detailing.",
+      },
+      {
+        step: "03",
+        label: "Production & Q.C.",
+        desc: "CNC plasma cutting, sub-arc H-beam welding, purlin and sheeting forming, shot blasting, and painting — all executed in our 65,000 sq.ft. factory.",
+      },
+      {
+        step: "04",
+        label: "Transportation",
+        desc: "Site-sequenced, export-grade packaged dispatch — all members clearly marked and dispatched in erection order to the project site.",
+      },
+      {
+        step: "05",
+        label: "Erection & Q.C.",
+        desc: "On-site erection advisory, alignment verification, connection torque audits, and continuous quality supervision during assembly.",
+      },
+      {
+        step: "06",
+        label: "Final Handover",
+        desc: "Structural inspection, snagging clearance, quality documentation sign-off, and project handover to the client.",
+      },
+    ],
   },
   quality: {
-    title: "Our Quality Commitment Statement",
-    description: "At Madhu Ratna Industry, quality is not a department; it is a manufacturing philosophy. We purchase only mill-certified coils, utilize advanced automation to minimize manual assembly errors, and execute structural shear inspections on every production lot. We guarantee our roofing clips and components are designed to equal or exceed the service lifecycle of your cladding panels.",
+    title: "Engineering Standards & Quality Commitment",
+    description:
+      "At Infinity Fabtech Pvt. Ltd., all buildings are designed and constructed in accordance with Indian standard for applicable load. Buildings are designed and manufactured in accordance with the latest edition of the following codes:",
     standards: [
-      { label: "Quality Standard Approved" },
-      { label: "AS3566 Standard Compliant" }
-    ]
-  }
+      { label: "MBMA — Low Rise Buildings System Manual, Metal Building Manufacturers Association Inc., USA" },
+      { label: "AISC — Manual for Steel Construction, Allowable Stress Design, American Institute of Steel Construction Inc., USA" },
+      { label: "AISI — Cold Formed Steel Design Manual, American Iron and Steel Institute, USA" },
+      { label: "IS-800:1984 & IS-800:2007 — Indian Standard for General Construction in Steel" },
+      { label: "IS-875 — Indian Standard for Design Loads" },
+      { label: "IS-1893 — Indian Standard Criteria for Earthquake Resistant Design of Structures" },
+      { label: "IS:801 — Indian Standard for Cold Formed Light Gauge Steel Sections" },
+    ],
+  },
+  goGreen: {
+    badge: "Sustainability",
+    title: "Go Green — Building a Better Tomorrow",
+    description:
+      "Infinity Fabtech is proud to contribute towards the environment and help conserve natural and non-renewable resources of energy. By using energy-efficient production methods and optimising all PEB processes, we generate less waste and provide healthier spaces for occupants as compared to a conventional building. Our buildings made from Steel are Green, as the design and construction material used significantly reduces or eliminates the negative impact of buildings on the environment and its occupants.",
+    points: [
+      "Our buildings are 98% steel which is recyclable up to 90%",
+      "Energy efficient methods for steel building production — substantially reduces greenhouse gas emissions (also reduces C-Factor)",
+      "Buildings are engineered and designed keeping in mind the local climate and available sources including sun, wind, and rain — so that everything could be incorporated beneficially for the building design",
+      "Natural ventilation systems maintain proper air changes, keeping the temperature in control and thus providing a comfortable indoor environment with minimal electricity use",
+      "Insulated and reflective roof and wall systems steel coated with Galvalume — reduces heat transfer and provides better thermal insulation, reducing energy consumption compared to conventional buildings",
+    ],
+  },
 };

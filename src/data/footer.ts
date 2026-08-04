@@ -8,28 +8,28 @@ export const footerContent = {
         { label: "Products & Systems", href: "/products" },
         { label: "Engineering Services", href: "/services" },
         { label: "Completed Projects", href: "/projects" },
-        { label: "Contact Us", href: "/contact" }
-      ]
+        { label: "Contact Us", href: "/contact" },
+      ],
     },
     products: {
-      title: "Products & Systems"
+      title: "Products & Systems",
     },
     headquarters: {
-      title: "Corporate Headquarters"
+      title: "Corporate Headquarters",
     },
     newsletter: {
-      title: "Subscribe to Technical Updates",
+      title: "Subscribe to Project Updates",
       placeholder: "Enter email address",
       buttonLabel: "Subscribe",
-      successMessage: "Thank you! You are subscribed."
-    }
+      successMessage: "Thank you! You are subscribed.",
+    },
   },
   copyright: {
-    template: "Madhu Ratna Industry. All rights reserved."
+    template: "Infinity Fabtech Pvt. Ltd. All rights reserved.",
   },
   policies: [
     { label: "Privacy Policy", href: "/privacy" },
     { label: "Terms of Supply", href: "/terms" },
-    { label: "Sitemap", href: "/sitemap" }
-  ]
+    { label: "Sitemap", href: "/sitemap" },
+  ],
 };

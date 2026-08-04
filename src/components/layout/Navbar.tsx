@@ -61,7 +61,7 @@ export default function Navbar() {
                 "text-xl font-black tracking-tight uppercase leading-none transition-colors",
                 !isScrolled && pathname === "/" ? "text-white" : "text-brand-blue dark:text-white"
               )}>
-                Madhu Ratna
+                Infinity Fabtech
               </span>
               <span className={cn(
                 "text-[9px] font-bold tracking-widest uppercase leading-none mt-1",
@@ -179,7 +179,7 @@ export default function Navbar() {
             <div className="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-4">
               <div className="flex flex-col">
                 <span className="text-lg font-black tracking-tight text-brand-blue dark:text-white uppercase">
-                  Madhu Ratna
+                  Infinity Fabtech
                 </span>
                 <span className="text-[8px] font-bold tracking-widest text-brand-orange uppercase">
                   Industry

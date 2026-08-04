@@ -30,7 +30,7 @@ export default function Footer() {
           <div className="space-y-4">
             <Link href="/" className="flex flex-col items-start focus:outline-none">
               <span className="text-xl font-black tracking-tight text-brand-blue uppercase leading-none">
-                Madhu Ratna
+                Infinity Fabtech
               </span>
               <span className="text-[9px] font-bold tracking-widest text-brand-orange uppercase leading-none mt-1">
                 Industry

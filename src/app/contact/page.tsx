@@ -9,7 +9,7 @@ import ContactForm from "@/components/contact/ContactForm";
 
 export const metadata: Metadata = constructMetadata({
   title: "Contact Our Sales Desk",
-  description: "Get in touch with Madhu Ratna Industry for technical inquiries, price quotes, customized stamping drawings, and bulk order supply schedules.",
+  description: "Get in touch with Infinity Fabtech Pvt. Ltd. for technical inquiries, price quotes, customized stamping drawings, and bulk order supply schedules.",
   slug: "contact",
 });
 
@@ -131,7 +131,7 @@ export default function ContactPage() {
         {/* Map Section */}
         <div className="mt-12 rounded-2xl overflow-hidden border border-slate-200/60 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-xs p-2">
           <iframe
-            title="Madhu Ratna Industry Office Location"
+            title="Infinity Fabtech Pvt. Ltd. Office Location"
             src={companyConfig.googleMapsEmbedUrl}
             width="100%"
             height="400"

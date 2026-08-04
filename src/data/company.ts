@@ -1,58 +1,108 @@
 export const companyConfig = {
-  name: "Madhu Ratna Industry",
-  tagline: "Global Leaders in Pre-Engineered Steel Buildings & Structural Steel Systems",
-  shortDescription: "Madhu Ratna Industry is a premier manufacturer and global supplier of Pre-Engineered Buildings (PEB), Structural Steel systems, industrial storage solutions, and high-precision roofing accessories, delivering architectural and structural integrity since 2008.",
-  history: "Established in 2008, Madhu Ratna Industry started with a vision to deliver world-class structural steel solutions. Today, we own a state-of-the-art manufacturing infrastructure equipped with advanced CNC plasma cutting, automated H-beam welding lines, progressive sheet profiling, and certified testing laboratories, ensuring that every structure complies with international quality and construction standards.",
-  reasonForTrust: "Our manufacturing excellence is backed by rigorous quality controls, advanced engineering designs, and end-to-end support from planning to erection.",
-  mission: "To engineer and deliver high-integrity steel building systems that guarantee structural longevity, exceptional weather resilience, and project cost-efficiency while setting benchmark standards in structural steel fabrication.",
-  vision: "To become the global partner-of-choice for Pre-Engineered Building (PEB) solutions, heavy structural steel fabrication, and smart industrial storage systems by driving innovation and engineering excellence.",
-  
-  address: "Survey No. 452/B, Industrial Zone, G.I.D.C., Ahmedabad, Gujarat - 382430, India",
-  phone: "+91 98765 43210",
-  phoneFormatted: "+919876543210",
-  email: "info@madhuratna.com",
-  salesEmail: "sales@madhuratna.com",
-  whatsappNumber: "+919876543210",
-  whatsappMessage: "Hello Madhu Ratna Industry, I would like to inquire about your Pre-Engineered Buildings and Structural Steel systems.",
-  operatingHours: "Monday - Saturday: 9:00 AM - 6:00 PM (IST)",
-  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14686.071850125272!2d72.63935276332158!3d23.04149635032822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e869be4b3b1c1%3A0x6b5c3ba3fd6b3ab2!2sGIDC%20Apparel%20Park!5e0!3m2!1sen!2sin!4v1716948512345!5m2!1sen!2sin",
+  name: "Infinity Fabtech Pvt. Ltd.",
+  tagline: "Professional. Innovative. Reliable.",
+  shortDescription:
+    "Infinity Fabtech Pvt. Ltd. is a leading pre-engineered steel buildings manufacturing company, delivering high-quality PEB structures with engineering excellence and timely execution across India.",
+  history:
+    "Infinity Fabtech Pvt. Ltd. is a pre-engineered steel buildings manufacturing company. The company, founded in 2008, began as a Pre fab steel structure company called Infinity Steel Works. After gaining significant experience in the industry and following the construction trends in the country, the promoters established Infinity Fabtech Pvt. Ltd. Company, which commenced operation in 2016. Within a short span of 11 years, we have built over 5.2 million square feet of buildings at various locations in India and over 500+ projects representing a wide variety of structures and virtually every type of industry. Timely completion and professional execution are the hallmark of the company. We believe in delivering on our commitments. This is why our clients reward us with so much repeat business - over 65% of our projects come from existing clients who have confidence in our ability to meet their expectations without compromising on quality.",
+  reasonForTrust:
+    "Over 65% of our projects come from existing clients and references who have confidence in our ability to meet their expectations without compromising on quality. We stand for quality, commitment, and trust.",
+  mission:
+    "Our mission is to offer high-quality services and steel products to our clients across the globe. Our motivated employees are mainly focused on providing services with highest business standards. Some other added values of our company are work ethics and corporate citizenship.",
+  vision:
+    "To be recognized as the benchmark in the steel buildings industry; this will be accomplished through Product Perfection, Engineering Excellence and the best customer services in industry.",
+
+  address: "Survey No. 53/1/2, Bajrang Palia, Ujjain Road, Indore (M.P.) India",
+  phone: "+91-9993025599",
+  phoneAlt: "+91-7024145599",
+  phoneLandline: "0731-4970653",
+  phoneFormatted: "+919993025599",
+  email: "info@infinityfabtech.com",
+  salesEmail: "infinity.og7@gmail.com",
+  website: "www.infinityfabtech.com",
+  whatsappNumber: "+919993025599",
+  whatsappMessage:
+    "Hello Infinity Fabtech Pvt. Ltd., I would like to inquire about your Pre-Engineered Steel Buildings.",
+  operatingHours: "Monday – Saturday: 9:00 AM – 6:00 PM (IST)",
+  googleMapsEmbedUrl:
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.5467811780684!2d75.85310087490073!3d22.71869207938694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd0df63dbcd9%3A0x1c5b4a6b5c3d2e1f!2sBajrang%20Palia%2C%20Ujjain%20Road%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1716948512345!5m2!1sen!2sin",
 
   stats: [
-    { label: "Years of Structural Excellence", value: "18+" },
-    { label: "Annual Fabrication Capacity", value: "75,000+ MT" },
-    { label: "Industrial Projects Built", value: "850+" },
-    { label: "Global Locations Served", value: "25+" }
+    { label: "Projects Completed", value: "500+" },
+    { label: "Years of Experience", value: "11+" },
+    { label: "Million Sq. Feet", value: "5.2+" },
+    { label: "Reference Business", value: "65%+" },
   ],
 
   coreValues: [
     {
-      title: "Structural Safety",
-      description: "We utilize advanced structural analysis tools like SAP2000 and Tekla to design buildings that easily withstand extreme seismic and wind load conditions.",
-      icon: "ShieldCheck"
+      title: "Product Perfection",
+      description:
+        "Every PEB component — from built-up columns and rafters to C & Z purlins and cladding sheets — is fabricated to exacting dimensional tolerances using mill-certified steel and advanced machinery.",
+      icon: "ShieldCheck",
     },
     {
-      title: "Precision Fabrication",
-      description: "From primary heavy members to secondary cold-formed purlins, our automated CNC machinery guarantees high dimensional tolerances.",
-      icon: "Cpu"
+      title: "Engineering Excellence",
+      description:
+        "We use specialised 3D wireframe software, nesting optimisation, and custom-developed analysis tools to convert complex conventional steel buildings into simpler, economical pre-engineered solutions without sacrificing utility and function.",
+      icon: "Cpu",
     },
     {
-      title: "Fast-Track Delivery",
-      description: "Pre-fabricated steel components are designed for direct bolted assembly, reducing on-site construction time by up to 50%.",
-      icon: "Truck"
+      title: "Faster Construction",
+      description:
+        "PEB saves 50% construction time compared to conventional methods. A 30,000 sq.ft. building can be made ready for occupation within 10–12 weeks — because time saved is money earned.",
+      icon: "Truck",
     },
     {
-      title: "Sustainable Construction",
-      description: "Our steel structures are 100% recyclable, energy-efficient when integrated with insulated panels, and conform to green building standards.",
-      icon: "Leaf"
-    }
+      title: "Sustainable Steel Buildings",
+      description:
+        "Our buildings are 98% steel which is recyclable up to 90%. We employ energy-efficient production methods that substantially reduce greenhouse gas emissions and help conserve natural and non-renewable resources of energy.",
+      icon: "Leaf",
+    },
   ],
 
   infrastructure: {
-    description: "Spanning across a 150,000 sq. ft. modern fabrication facility, our plant incorporates automated H-beam welding lines, CNC multi-torch plate cutting, shot blasting chambers, and heavy-duty sheet profiling mills. This enables us to manufacture complex multi-span industrial structures with speed and complete adherence to design blueprints.",
+    description:
+      "Our 65,000 sq.ft. state-of-the-art manufacturing facility at Bajrang Palia, Ujjain Road, Indore (M.P.) is fully equipped with CNC plasma profile cutting machines, EOT Cranes, Beam line, 30 M.Ton Un-coiler and straighteners, separate two assembly and production lines, C & Z purlin and sheeting machines, curve profile machines, and 10+ fitting stations. We use sophisticated nesting software to cut-to-length web and flange by using a de-coiler; the flange and web plate are welded to form I sections in our advanced automatic sub-arc continuous H-beam welding station. Shot blasting is done to SA-2.5 standards before primer and dual-coat epoxy/enamel painting applied by airless strain-less painting machine.",
     sections: [
-      { title: "Heavy Structural Fabrication", description: "Automated fabrication of primary framing members including columns, rafters, and crane beams with certified high-penetration welding." },
-      { title: "Purlin & Panel Roll-Forming", description: "High-speed forming lines producing Z & C purlins, deck sheets, and insulated sandwich panels in standard and custom profiles." },
-      { title: "Shot Blasting & Surface Coating", description: "Industrial shot blasting units achieving Sa 2.5 cleanliness, followed by automatic paint application or hot-dip galvanizing." }
-    ]
-  }
+      {
+        title: "CNC Plasma Cutting & H-Beam Welding",
+        description:
+          "CNC plasma profile cutting machines deliver sub-millimetre precision. The automatic sub-arc continuous H-beam welding station welds flange and web plate to form I-sections with certified deep-penetration weld quality.",
+      },
+      {
+        title: "Purlin, Sheeting & Profile Lines",
+        description:
+          "Dedicated C & Z purlin forming lines, curve profile machines, and sheeting machines produce secondary structural members at high speed using sophisticated nesting software for zero material wastage.",
+      },
+      {
+        title: "Surface Treatment & Coating",
+        description:
+          "Shot blasting to SA-2.5 standards removes mill scale, rust, oil, and grease. One coat of primer plus two coats of enamel or epoxy finish is applied by airless strain-less painting machine for appropriate DFT value.",
+      },
+    ],
+  },
+
+  goGreen: {
+    title: "Go Green — Sustainable Steel Buildings",
+    description:
+      "Infinity Fabtech is proud to contribute to the environment and help conserve natural and non-renewable resources of energy. By using energy-efficient production methods and optimising all PEB processes, we generate less waste and provide healthier spaces for occupants as compared to a conventional building.",
+    points: [
+      "Our buildings are 98% steel which is recyclable up to 90%",
+      "Energy efficient methods for steel building production that substantially reduce greenhouse gas emissions (also reduce C-Factor)",
+      "Buildings engineered and designed keeping in mind local climate and available sources — sun, wind, rain — incorporated beneficially for the building design",
+      "Natural ventilation systems maintain proper air changes, keeping temperature in control with minimal electricity use",
+      "Insulated and reflective roof and wall systems steel coated with Galvalume — reduces heat transfer and provides better thermal insulation",
+    ],
+  },
+
+  standards: [
+    { label: "MBMA — Low Rise Buildings System Manual, Metal Building Manufacturers Association Inc., USA" },
+    { label: "AISC — Manual for Steel Construction, Allowable Stress Design, American Institute of Steel Construction Inc., USA" },
+    { label: "AISI — Cold Formed Steel Design Manual, American Iron and Steel Institute, USA" },
+    { label: "IS-800:1984 & IS-800:2007 — Indian Standard for General Construction in Steel" },
+    { label: "IS-875 — Indian Standard for Design Loads" },
+    { label: "IS-1893 — Indian Standard for Earthquake Resistant Design" },
+    { label: "IS:801 — Indian Standard for Cold Formed Light Gauge Steel Sections" },
+  ],
 };
