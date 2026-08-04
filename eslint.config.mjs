@@ -18,6 +18,8 @@ const eslintConfig = [
       "out/**",
       "build/**",
       "next-env.d.ts",
+      "src/copy-images.js",
+      "src/generate-map.js",
     ],
   },
 ];
