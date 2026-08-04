@@ -97,7 +97,7 @@ export default function RoofExplorer(){
   const G=useMemo(()=>geo(wM,eM,pitch,spans,roof),[wM,eM,pitch,spans,roof]);
   const lbls=useMemo(()=>mkLabels(G,ft),[G,ft]);
   const tog=(id:string|null)=>setAId(p=>p===id?null:id);
-  const apply=(p:Preset)=>{setWM(p.width);setEM(p.eave);setPitch(p.pitch);setSpans(p.spans);setRoof(p.roof);setFt({...DEF_FEAT,...p.feat});setPreset(p.id);setAId(null);};
+  const apply=(p:Preset)=>{setWM(p.width);setEM(p.eave);setPitch(p.pitch);setSpans(p.spans);setRoof(p.roof);setFt({...DEF_FEAT,...p.feat} as Feat);setPreset(p.id);setAId(null);};
   const togF=(id:string)=>{id==="crane"&&!ft.crane?setFt(p=>({...p,crane:true,mezzanine:true})):setFt(p=>({...p,[id]:!p[id]}));setAId(null);};
   const lInfo=useMemo(()=>{if(!aId)return null;const g=lbls.find(l=>l.id===aId);if(g)return{text:g.text,detail:g.detail,cat:g.cat};return null;},[aId,lbls]);
   const enFt=FEAT.filter(f=>ft[f.id]);
