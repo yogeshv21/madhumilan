@@ -33,7 +33,7 @@ export default function Footer() {
                 Infinity Fabtech
               </span>
               <span className="text-[9px] font-bold tracking-widest text-brand-orange uppercase leading-none mt-1">
-                Industry
+                Pvt. Ltd.
               </span>
             </Link>
             <p className="text-sm leading-relaxed text-slate-650">

@@ -67,7 +67,7 @@ export default function Navbar() {
                 "text-[9px] font-bold tracking-widest uppercase leading-none mt-1",
                 !isScrolled && pathname === "/" ? "text-brand-steel" : "text-brand-orange"
               )}>
-                Industry
+                Pvt. Ltd.
               </span>
             </Link>
 
@@ -84,8 +84,8 @@ export default function Navbar() {
                       isActive
                         ? "text-brand-orange"
                         : !isScrolled && pathname === "/"
-                        ? "text-white hover:text-white/80"
-                        : "text-slate-700 dark:text-slate-200"
+                          ? "text-white hover:text-white/80"
+                          : "text-slate-700 dark:text-slate-200"
                     )}
                   >
                     {link.name}
@@ -182,7 +182,7 @@ export default function Navbar() {
                   Infinity Fabtech
                 </span>
                 <span className="text-[8px] font-bold tracking-widest text-brand-orange uppercase">
-                  Industry
+                  Pvt. Ltd.
                 </span>
               </div>
               <button
