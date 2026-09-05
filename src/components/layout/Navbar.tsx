@@ -12,6 +12,7 @@ const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
   { name: "Products", href: "/products" },
+  { name: "3D Models", href: "/3d-models" },
   { name: "Services", href: "/services" },
   { name: "Projects", href: "/projects" },
   { name: "Contact", href: "/contact" },
@@ -72,7 +73,7 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-8" aria-label="Main Navigation">
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8" aria-label="Main Navigation">
               {navLinks.map((link) => {
                 const isActive = pathname === link.href;
                 return (

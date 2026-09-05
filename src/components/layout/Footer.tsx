@@ -36,7 +36,7 @@ export default function Footer() {
                 Pvt. Ltd.
               </span>
             </Link>
-            <p className="text-sm leading-relaxed text-slate-650">
+            <p className="text-sm leading-relaxed text-slate-600">
               {companyConfig.shortDescription}
             </p>
             <div className="pt-2">
@@ -46,7 +46,7 @@ export default function Footer() {
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg bg-emerald-650 hover:bg-emerald-600 px-4 py-2 text-xs font-bold text-white uppercase tracking-wider transition-colors shadow-sm focus:outline-none"
+                className="inline-flex items-center gap-2 rounded-lg bg-emerald-600 hover:bg-emerald-700 px-4 py-2 text-xs font-bold text-white uppercase tracking-wider transition-colors shadow-sm focus:outline-none"
               >
                 <MessageCircle className="h-4 w-4" />
                 Chat on WhatsApp
@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Column 2: Quick Links */}
           <div>
-            <h4 className="text-sm font-bold text-brand-blue uppercase tracking-wider mb-6">
+            <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-6">
               {content.sections.corporateLinks.title}
             </h4>
             <ul className="space-y-3 text-sm">
@@ -72,7 +72,7 @@ export default function Footer() {
 
           {/* Column 3: Featured Products */}
           <div>
-            <h4 className="text-sm font-bold text-brand-blue uppercase tracking-wider mb-6">
+            <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-6">
               {content.sections.products.title}
             </h4>
             <ul className="space-y-3 text-sm">
@@ -92,31 +92,31 @@ export default function Footer() {
           {/* Column 4: Contact & Newsletter */}
           <div className="space-y-6">
             <div>
-              <h4 className="text-sm font-bold text-brand-blue uppercase tracking-wider mb-4">
+              <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">
                 {content.sections.headquarters.title}
               </h4>
-              <ul className="space-y-3 text-sm text-slate-650">
+              <ul className="space-y-3 text-sm text-slate-600">
                 <li className="flex items-start gap-2.5">
-                  <MapPin className="h-4.5 w-4.5 text-brand-orange shrink-0 mt-0.5" />
+                  <MapPin className="h-4.5 w-4.5 text-slate-400 shrink-0 mt-0.5" />
                   <span className="leading-tight">{companyConfig.address}</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Phone className="h-4 w-4 text-brand-orange shrink-0" />
+                  <Phone className="h-4 w-4 text-slate-400 shrink-0" />
                   <span>{companyConfig.phone}</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Mail className="h-4 w-4 text-brand-orange shrink-0" />
+                  <Mail className="h-4 w-4 text-slate-400 shrink-0" />
                   <span>{companyConfig.email}</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Clock className="h-4 w-4 text-brand-orange shrink-0" />
+                  <Clock className="h-4 w-4 text-slate-400 shrink-0" />
                   <span>{companyConfig.operatingHours}</span>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h5 className="text-xs font-bold text-brand-blue uppercase tracking-wider mb-2">
+              <h5 className="text-xs font-bold text-slate-900 uppercase tracking-wider mb-2">
                 {content.sections.newsletter.title}
               </h5>
               <form onSubmit={handleSubscribe} className="flex gap-2">

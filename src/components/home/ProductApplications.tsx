@@ -21,7 +21,7 @@ export default function ProductApplications() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16 space-y-4">
-          <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
+          <span className="text-xs font-black uppercase tracking-widest text-slate-500">
             {content.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-brand-blue dark:text-white leading-tight">
@@ -41,7 +41,7 @@ export default function ProductApplications() {
                 key={idx}
                 className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 hover:border-brand-orange/20 transition-all duration-300 group"
               >
-                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors">
+                <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-100 text-slate-600 group-hover:bg-brand-orange group-hover:text-white transition-colors">
                   <Icon className="h-5 w-5" />
                 </div>
                 <div className="space-y-1.5">

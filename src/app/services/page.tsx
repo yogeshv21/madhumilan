@@ -35,7 +35,7 @@ export default function ServicesPage() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
             {content.hero.title}
           </h1>
-          <p className="text-sm text-slate-350 max-w-2xl leading-relaxed">
+          <p className="text-sm text-slate-400 max-w-2xl leading-relaxed">
             {content.hero.description}
           </p>
         </div>
@@ -103,7 +103,7 @@ export default function ServicesPage() {
         <h3 className="text-xl font-black text-brand-blue dark:text-white uppercase tracking-wider mb-4">
           {content.callout.title}
         </h3>
-        <p className="text-xs text-slate-500 dark:text-slate-455 max-w-xl mx-auto leading-relaxed mb-6">
+        <p className="text-xs text-slate-500 dark:text-slate-400 max-w-xl mx-auto leading-relaxed mb-6">
           {content.callout.description}
         </p>
         <Link

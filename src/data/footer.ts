@@ -6,6 +6,7 @@ export const footerContent = {
         { label: "Home Overview", href: "/" },
         { label: "About Our Company", href: "/about" },
         { label: "Products & Systems", href: "/products" },
+        { label: "3D Frame Models", href: "/3d-models" },
         { label: "Engineering Services", href: "/services" },
         { label: "Completed Projects", href: "/projects" },
         { label: "Contact Us", href: "/contact" },

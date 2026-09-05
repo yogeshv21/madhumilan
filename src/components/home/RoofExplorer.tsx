@@ -155,9 +155,9 @@ export default function RoofExplorer(){
             {(
               <div className="border-t border-slate-100 p-5 bg-slate-50/70">
                 <div className="grid sm:grid-cols-2 gap-x-8 gap-y-5 mb-5">
-                  <Slider label="Eave Height" value={eM} min={4} max={12} step={.5} unit="m" color="#0B2545" onChange={v=>{setEM(v);setAId(null);}} />
-                  <Slider label="Building Width" value={wM} min={10} max={70} step={5} unit="m" color="#134074" onChange={v=>{setWM(v);setAId(null);}} />
-                  <Slider label="Roof Pitch" value={pitch} min={3} max={25} step={1} unit="°" color="#F26419" onChange={v=>{setPitch(v);setAId(null);}} />
+                  <Slider label="Eave Height" value={eM} min={4} max={12} step={.5} unit="m" color="#B91C1C" onChange={v=>{setEM(v);setAId(null);}} />
+                  <Slider label="Building Width" value={wM} min={10} max={70} step={5} unit="m" color="#991B1B" onChange={v=>{setWM(v);setAId(null);}} />
+                  <Slider label="Roof Pitch" value={pitch} min={3} max={25} step={1} unit="°" color="#B91C1C" onChange={v=>{setPitch(v);setAId(null);}} />
                   <div className="space-y-2">
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-xs font-semibold text-slate-600">Spans</span>
@@ -186,14 +186,14 @@ export default function RoofExplorer(){
           </div>
           <div className="space-y-4">
             <div className="bg-brand-blue rounded-2xl p-5 text-white">
-              <div className="text-[10px] font-semibold text-blue-300 uppercase tracking-wider mb-0.5">{cur?.name} — {cur?.sub}</div>
+              <div className="text-[10px] font-semibold text-red-300 uppercase tracking-wider mb-0.5">{cur?.name} — {cur?.sub}</div>
               <div className="text-sm font-bold mb-2">Practical: {cur?.practical}</div>
-              <p className="text-xs text-blue-100 leading-relaxed mb-3">{cur?.desc}</p>
+              <p className="text-xs text-red-100 leading-relaxed mb-3">{cur?.desc}</p>
               <div className="grid grid-cols-2 gap-2">
-                {[{l:"Width",v:`${wM}m`},{l:"Eave Ht.",v:`${eM}m`},{l:"Ridge Ht.",v:`+${G.ridgeM}m`},{l:"Pitch",v:`${pitch}° (${pr})`},{l:"Spans",v:`${spans} Bay${spans>1?"s":""}`},{l:"Roof",v:roof==="pitched"?"Pitched":"Mono"},].map(({l,v})=><div key={l} className="bg-white/10 rounded-lg p-2"><div className="text-[9px] text-blue-300 uppercase tracking-wide">{l}</div><div className="text-xs font-bold text-white mt-0.5">{v}</div></div>)}
+                {[{l:"Width",v:`${wM}m`},{l:"Eave Ht.",v:`${eM}m`},{l:"Ridge Ht.",v:`+${G.ridgeM}m`},{l:"Pitch",v:`${pitch}° (${pr})`},{l:"Spans",v:`${spans} Bay${spans>1?"s":""}`},{l:"Roof",v:roof==="pitched"?"Pitched":"Mono"},].map(({l,v})=><div key={l} className="bg-white/10 rounded-lg p-2"><div className="text-[9px] text-red-300 uppercase tracking-wide">{l}</div><div className="text-xs font-bold text-white mt-0.5">{v}</div></div>)}
               </div>
-              {enFt.length>0&&<div className="mt-3 bg-white/10 rounded-lg p-2.5"><div className="text-[9px] text-blue-300 uppercase tracking-wide mb-1">Active Components</div><div className="flex flex-wrap gap-1">{enFt.map(f=><span key={f.id} className="text-[10px] font-semibold px-2 py-0.5 rounded text-white" style={{background:f.color+"55"}}>{f.icon} {f.label}</span>)}</div></div>}
-              <div className="mt-3 bg-white/10 rounded-lg p-2.5"><div className="text-[9px] text-blue-300 uppercase tracking-wide">Est. Roof Area (30m depth)</div><div className="text-xs font-bold text-white mt-0.5">{(wM*30).toLocaleString()} m²</div></div>
+              {enFt.length>0&&<div className="mt-3 bg-white/10 rounded-lg p-2.5"><div className="text-[9px] text-red-300 uppercase tracking-wide mb-1">Active Components</div><div className="flex flex-wrap gap-1">{enFt.map(f=><span key={f.id} className="text-[10px] font-semibold px-2 py-0.5 rounded text-white" style={{background:f.color+"55"}}>{f.icon} {f.label}</span>)}</div></div>}
+              <div className="mt-3 bg-white/10 rounded-lg p-2.5"><div className="text-[9px] text-red-300 uppercase tracking-wide">Est. Roof Area (30m depth)</div><div className="text-xs font-bold text-white mt-0.5">{(wM*30).toLocaleString()} m²</div></div>
             </div>
             <AnimatePresence>{lInfo&&<motion.div initial={{opacity:0,y:-8}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-8}} className="bg-amber-50 border border-brand-orange/30 rounded-xl p-4"><div className="text-[10px] font-bold text-brand-orange uppercase tracking-wider mb-1">{lInfo.cat==="product"?"● Infinity Fabtech Product":lInfo.cat==="structure"?"● Structural Member":"● Roofing Component"}</div><div className="text-sm font-bold text-slate-800 mb-1">{lInfo.text}</div><p className="text-xs text-slate-600 leading-relaxed">{lInfo.detail}</p></motion.div>}</AnimatePresence>
             <div className="bg-white rounded-xl border border-slate-200 p-4"><h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">Products for This Config</h4><ul className="space-y-1.5 max-h-48 overflow-y-auto">{prods(roof,spans,ft).map(p=><li key={p} className="flex items-center gap-2 text-sm text-slate-600"><span className="w-1.5 h-1.5 rounded-full bg-brand-orange flex-none" />{p}</li>)}</ul></div>

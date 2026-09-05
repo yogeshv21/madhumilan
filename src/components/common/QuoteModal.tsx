@@ -149,7 +149,7 @@ export default function QuoteModal() {
                   {/* Row 1 */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] font-black text-slate-550 dark:text-slate-400 uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
                         Full Name *
                       </label>
                       <div className="relative">
@@ -158,7 +158,7 @@ export default function QuoteModal() {
                         </span>
                         <input
                           {...register("name")}
-                          className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-850/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
+                          className="w-full rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-900/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
                           placeholder="John Doe"
                         />
                       </div>
@@ -168,7 +168,7 @@ export default function QuoteModal() {
                     </div>
 
                     <div>
-                      <label className="block text-[10px] font-black text-slate-555 dark:text-slate-400 uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
                         Company Name *
                       </label>
                       <div className="relative">
@@ -177,7 +177,7 @@ export default function QuoteModal() {
                         </span>
                         <input
                           {...register("company")}
-                          className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-850/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
+                          className="w-full rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-900/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
                           placeholder="Industrial Corp"
                         />
                       </div>
@@ -190,7 +190,7 @@ export default function QuoteModal() {
                   {/* Row 2 */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-[10px] font-black text-slate-555 dark:text-slate-400 uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
                         Phone Number *
                       </label>
                       <div className="relative">
@@ -199,7 +199,7 @@ export default function QuoteModal() {
                         </span>
                         <input
                           {...register("phone")}
-                          className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-855/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
+                          className="w-full rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-900/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
                           placeholder="+91 98765 43210"
                         />
                       </div>
@@ -209,7 +209,7 @@ export default function QuoteModal() {
                     </div>
 
                     <div>
-                      <label className="block text-[10px] font-black text-slate-555 dark:text-slate-400 uppercase tracking-widest mb-1.5">
+                      <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
                         Email Address *
                       </label>
                       <div className="relative">
@@ -219,7 +219,7 @@ export default function QuoteModal() {
                         <input
                           {...register("email")}
                           type="email"
-                          className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-855/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
+                          className="w-full rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-900/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs"
                           placeholder="client@company.com"
                         />
                       </div>
@@ -231,7 +231,7 @@ export default function QuoteModal() {
 
                   {/* Dropdown */}
                   <div>
-                    <label className="block text-[10px] font-black text-slate-555 dark:text-slate-400 uppercase tracking-widest mb-1.5">
+                    <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
                       Product Requirement *
                     </label>
                     <div className="relative">
@@ -240,7 +240,7 @@ export default function QuoteModal() {
                       </span>
                       <select
                         {...register("productRequirement")}
-                        className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-855/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs appearance-none cursor-pointer"
+                        className="w-full rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-900/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all shadow-xs appearance-none cursor-pointer"
                       >
                         <option value="">Select Building / Service Type</option>
                         <option value="peb-buildings">Pre-Engineered Steel Buildings (PEB)</option>
@@ -266,7 +266,7 @@ export default function QuoteModal() {
 
                   {/* Message */}
                   <div>
-                    <label className="block text-[10px] font-black text-slate-555 dark:text-slate-400 uppercase tracking-widest mb-1.5">
+                    <label className="block text-[10px] font-black text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-1.5">
                       Technical Requirements & Quantities *
                     </label>
                     <div className="relative">
@@ -276,7 +276,7 @@ export default function QuoteModal() {
                       <textarea
                         {...register("message")}
                         rows={4}
-                        className="w-full rounded-xl border border-slate-250 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-855/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all resize-none shadow-xs"
+                        className="w-full rounded-xl border border-slate-200 dark:border-slate-700/80 bg-slate-50/30 dark:bg-slate-900/50 pl-10 pr-4 py-2.5 text-xs sm:text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:bg-white dark:focus:bg-slate-900 focus:border-brand-orange focus:ring-4 focus:ring-brand-orange/10 outline-none transition-all resize-none shadow-xs"
                         placeholder="Please specify thickness, material grade, and estimated quantities required for your project..."
                       />
                     </div>

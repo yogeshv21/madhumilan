@@ -4,15 +4,15 @@
 @custom-variant dark (&:not(*));
 
 @theme {
-  --color-brand-blue: #0b2545;
-  --color-brand-light-blue: #134074;
-  --color-brand-steel: #8da9c4;
-  --color-brand-orange: #f26419;
-  --color-brand-orange-light: #f68e56;
-  --color-brand-dark: #0a0f18;
-  --color-brand-gray: #f4f6f9;
-  --color-brand-dark-gray: #1e293b;
-  
+  --color-brand-blue: #b91c1c;
+  --color-brand-light-blue: #991b1b;
+  --color-brand-steel: #d6d3d1;
+  --color-brand-orange: #b91c1c;
+  --color-brand-orange-light: #991b1b;
+  --color-brand-dark: #1c1917;
+  --color-brand-gray: #faf7f6;
+  --color-brand-dark-gray: #292524;
+
   --font-sans: var(--font-geist-sans), Arial, sans-serif;
   --font-mono: var(--font-geist-mono), monospace;
 }
@@ -47,7 +47,7 @@ body {
 
 /* Focus utilities for WCAG compliance */
 *:focus-visible {
-  outline: 2px solid #f26419;
+  outline: 2px solid #b91c1c;
   outline-offset: 2px;
 }
 

@@ -27,7 +27,7 @@ export default function ProductsPage() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
             Industrial Roofing Catalog
           </h1>
-          <p className="text-sm text-slate-350 max-w-2xl leading-relaxed">
+          <p className="text-sm text-slate-400 max-w-2xl leading-relaxed">
             High-integrity metallic and polymer accessories for Pre-Engineered Buildings, warehouses, and steel structures.
           </p>
         </div>

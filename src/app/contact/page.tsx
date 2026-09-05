@@ -36,7 +36,7 @@ export default function ContactPage() {
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
             {content.hero.title}
           </h1>
-          <p className="text-sm text-slate-350 max-w-2xl leading-relaxed">
+          <p className="text-sm text-slate-400 max-w-2xl leading-relaxed">
             {content.hero.description}
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function ContactPage() {
                 {content.contacts.title}
               </h3>
 
-              <div className="space-y-4 text-xs text-slate-600 dark:text-slate-355">
+              <div className="space-y-4 text-xs text-slate-600 dark:text-slate-400">
                 <div className="flex items-start gap-3">
                   <div className="h-8 w-8 rounded-lg bg-brand-orange/10 text-brand-orange flex items-center justify-center shrink-0 mt-0.5">
                     <MapPin className="h-4.5 w-4.5" />

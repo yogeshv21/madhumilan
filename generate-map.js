@@ -9,18 +9,12 @@ const MAP_W = 800;
 const MAP_H = 750;
 const BASE_SCALE = 1000;
 
-const STATE_PALETTE = [
-  "#bbf7d0",
-  "#fef08a",
-  "#fbcfe8",
-  "#bfdbfe",
-  "#ddd6fe",
-  "#a7f3d0",
-  "#fde68a",
-  "#fecdd3",
-  "#c7d2fe",
-  "#e9d5ff"
-];
+// Two closely-related neutral land tones (alternated so adjacent states
+// are still visually distinguishable) instead of a multi-hue palette —
+// reads as a real reference map rather than a generated illustration.
+const STATE_PALETTE = ["#eef1ea", "#e7ebe3"];
+const SEA_COLOR = "#eaf2f8";
+const BORDER_COLOR = "#94a3b8";
 
 function ringArea(ring) {
   let area = 0;
@@ -64,10 +58,10 @@ try {
     .translate([MAP_W / 2, MAP_H / 2]);
 
   const pathGen = geoPath().projection(proj);
-  
+
   let svgContent = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${MAP_W} ${MAP_H}" width="100%" height="100%">\n`;
-  svgContent += `  <!-- Background Canvas -->\n`;
-  svgContent += `  <rect width="${MAP_W}" height="${MAP_H}" fill="#f8fafc" rx="24" />\n`;
+  svgContent += `  <!-- Background Canvas (sea) -->\n`;
+  svgContent += `  <rect width="${MAP_W}" height="${MAP_H}" fill="${SEA_COLOR}" rx="24" />\n`;
   svgContent += `  <g>\n`;
 
   geojson.features.forEach((feature, idx) => {
@@ -75,7 +69,7 @@ try {
     const d = pathGen(feature);
     if (d) {
       const fillColor = STATE_PALETTE[idx % STATE_PALETTE.length];
-      svgContent += `    <path d="${d}" fill="${fillColor}" stroke="#475569" stroke-width="0.8" stroke-linejoin="round" data-name="${name}" />\n`;
+      svgContent += `    <path d="${d}" fill="${fillColor}" stroke="${BORDER_COLOR}" stroke-width="0.8" stroke-linejoin="round" data-name="${name}" />\n`;
     }
   });
 

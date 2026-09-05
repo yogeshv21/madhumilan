@@ -18,7 +18,7 @@ export default function ManufacturingExcellence() {
           {/* Left Text */}
           <div className="space-y-6">
             <div className="space-y-2">
-              <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
+              <span className="text-xs font-black uppercase tracking-widest text-slate-500">
                 {content.badge}
               </span>
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-brand-blue dark:text-white">
@@ -33,7 +33,7 @@ export default function ManufacturingExcellence() {
                 const Icon = iconMap[idx] || Settings;
                 return (
                   <div key={idx} className="flex gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800 shadow-xs">
-                    <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-orange/10 text-brand-orange">
+                    <div className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-slate-100 text-slate-600">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div>
@@ -54,14 +54,14 @@ export default function ManufacturingExcellence() {
           <div className="relative group">
             <div className="absolute inset-0 bg-brand-blue rounded-2xl transform translate-x-3 -translate-y-3 opacity-10 group-hover:translate-x-4 group-hover:-translate-y-4 transition-transform duration-300" />
             <div className="relative border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden bg-white dark:bg-slate-900 p-8 lg:p-10 shadow-lg">
-              <h3 className="text-base font-bold text-brand-blue dark:text-white uppercase tracking-wider mb-6">
+              <h3 className="text-base font-bold text-slate-900 dark:text-white uppercase tracking-wider mb-6">
                 {content.qaTitle}
               </h3>
-              
+
               <div className="space-y-5">
                 {content.qaChecklist.map((item, idx) => (
                   <div key={idx} className="flex items-start gap-4 pb-4 border-b border-slate-100 dark:border-slate-800 last:border-0 last:pb-0">
-                    <span className="text-lg font-black text-brand-orange">{item.step}</span>
+                    <span className="text-lg font-black text-slate-300">{item.step}</span>
                     <div>
                       <h4 className="font-bold text-slate-800 dark:text-white text-xs">{item.label}</h4>
                       <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5 leading-relaxed">{item.desc}</p>

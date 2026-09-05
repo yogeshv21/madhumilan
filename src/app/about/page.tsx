@@ -223,10 +223,10 @@ export default function AboutPage() {
             ].map((leader, i) => (
               <div
                 key={i}
-                className="group relative flex flex-col md:flex-row rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-850 overflow-hidden hover:shadow-xl hover:shadow-brand-orange/5 hover:-translate-y-2 transition-all duration-300 md:min-h-[420px]"
+                className="group relative flex flex-col md:flex-row rounded-3xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 overflow-hidden hover:shadow-xl hover:shadow-brand-orange/5 hover:-translate-y-2 transition-all duration-300 md:min-h-[420px]"
               >
                 {/* Vertical Portrait Image Container */}
-                <div className="relative w-full md:w-[32%] aspect-[3/4] md:aspect-auto min-h-[350px] md:min-h-full overflow-hidden bg-slate-200 dark:bg-slate-900 border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-850">
+                <div className="relative w-full md:w-[32%] aspect-[3/4] md:aspect-auto min-h-[350px] md:min-h-full overflow-hidden bg-slate-200 dark:bg-slate-900 border-b md:border-b-0 md:border-r border-slate-100 dark:border-slate-800">
                   <Image
                     src={leader.src}
                     alt={leader.name}
@@ -241,7 +241,7 @@ export default function AboutPage() {
                 {/* Content Block */}
                 <div className="p-10 lg:p-12 flex-1 flex flex-col justify-center space-y-6">
                   <div className="space-y-4">
-                    <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-slate-200/60 dark:border-slate-850 pb-4 gap-3">
+                    <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between border-b border-slate-200/60 dark:border-slate-800 pb-4 gap-3">
                       <h3 className="text-2xl lg:text-3xl font-black text-brand-blue dark:text-white group-hover:text-brand-orange transition-colors duration-300">
                         {leader.name}
                       </h3>
@@ -249,7 +249,7 @@ export default function AboutPage() {
                         {leader.role}
                       </span>
                     </div>
-                    <p className="text-base leading-relaxed text-slate-655 dark:text-slate-350">
+                    <p className="text-base leading-relaxed text-slate-600 dark:text-slate-400">
                       {leader.description}
                     </p>
                   </div>
@@ -353,7 +353,7 @@ export default function AboutPage() {
               <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-brand-blue dark:text-white leading-tight">
                 65,000 Sq.Ft. State-of-the-Art Plant
               </h2>
-              <p className="text-base text-slate-655 dark:text-slate-300 leading-relaxed font-medium">
+              <p className="text-base text-slate-600 dark:text-slate-300 leading-relaxed font-medium">
                 IFTPL has a state-of-art 65,000 sq. ft. Manufacturing facility in Bajrang paliya, Indore (M.P.) The plant is fully kitted out with the latest machinery – CNC plasma proﬁle Cutting machines, EOT Cranes, Beam line, 30 M. Ton Un-coiler and straighteners, Separate two assembly and production line, C & Z purlin, Sheeting Machines, Curve Proﬁle machines, 10+ ﬁtting stations etc…
               </p>
               <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">
@@ -520,7 +520,7 @@ export default function AboutPage() {
                 {content.quality.standards.map((std, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-850 hover:border-brand-orange/25 hover:shadow-sm transition-all group"
+                    className="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-100 dark:border-slate-800 hover:border-brand-orange/25 hover:shadow-sm transition-all group"
                   >
                     {/* Badge */}
                     <div className="flex-shrink-0 h-10 w-14 rounded-xl bg-brand-blue flex items-center justify-center group-hover:bg-brand-orange transition-colors">

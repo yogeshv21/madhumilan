@@ -23,7 +23,7 @@ export default function ServicesOverview() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16">
           <div className="space-y-3">
-            <span className="inline-block px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-xs font-black uppercase tracking-widest text-brand-orange">
+            <span className="inline-block px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-black uppercase tracking-widest text-slate-600">
               {content.badge}
             </span>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-brand-blue">
@@ -32,7 +32,7 @@ export default function ServicesOverview() {
           </div>
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 mt-4 md:mt-0 text-sm font-bold uppercase tracking-wider text-brand-orange hover:text-brand-orange-light transition-colors group focus:outline-none shrink-0"
+            className="inline-flex items-center gap-2 mt-4 md:mt-0 text-sm font-bold uppercase tracking-wider text-slate-600 hover:text-brand-orange transition-colors group focus:outline-none shrink-0"
           >
             {content.exploreLabel}
             <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
@@ -53,11 +53,11 @@ export default function ServicesOverview() {
 
                 <div className="space-y-4">
                   {/* Icon Box */}
-                  <div className="inline-flex items-center justify-center h-12 w-12 rounded-xl bg-brand-orange/5 text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                  <div className="inline-flex items-center justify-center h-12 w-12 rounded-xl bg-slate-100 text-slate-600 group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
                     <Icon className="h-6 w-6" />
                   </div>
 
-                  <h3 className="text-lg font-black text-brand-blue group-hover:text-brand-orange transition-colors duration-300">
+                  <h3 className="text-lg font-black text-slate-900 group-hover:text-brand-orange transition-colors duration-300">
                     {service.title}
                   </h3>
 

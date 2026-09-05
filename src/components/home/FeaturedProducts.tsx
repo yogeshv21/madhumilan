@@ -21,7 +21,7 @@ export default function FeaturedProducts() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 lg:mb-16">
           <div className="space-y-3">
-            <span className="inline-block px-3 py-1 rounded-full bg-brand-orange/10 border border-brand-orange/20 text-xs font-black uppercase tracking-widest text-brand-orange">
+            <span className="inline-block px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs font-black uppercase tracking-widest text-slate-600">
               Our Solutions
             </span>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-brand-blue">
@@ -30,7 +30,7 @@ export default function FeaturedProducts() {
           </div>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 mt-4 md:mt-0 text-sm font-bold uppercase tracking-wider text-brand-orange hover:text-brand-orange-light transition-colors group focus:outline-none shrink-0"
+            className="inline-flex items-center gap-2 mt-4 md:mt-0 text-sm font-bold uppercase tracking-wider text-slate-600 hover:text-brand-orange transition-colors group focus:outline-none shrink-0"
           >
             View Full Catalog
             <ArrowRight className="h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
@@ -57,7 +57,7 @@ export default function FeaturedProducts() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <span className="absolute top-4 left-4 inline-flex items-center gap-1 px-3 py-1 rounded-lg bg-brand-blue/90 backdrop-blur-xs text-[10px] font-bold text-white uppercase tracking-wider shadow-sm">
-                  <Tag className="h-3 w-3 text-brand-orange" />
+                  <Tag className="h-3 w-3 text-white/80" />
                   {prod.category}
                 </span>
               </div>
@@ -65,7 +65,7 @@ export default function FeaturedProducts() {
               {/* Product Details */}
               <div className="p-8 flex flex-col justify-between grow space-y-6">
                 <div className="space-y-4">
-                  <h3 className="text-xl font-black text-brand-blue group-hover:text-brand-orange transition-colors duration-300">
+                  <h3 className="text-xl font-black text-slate-900 group-hover:text-brand-orange transition-colors duration-300">
                     {prod.name}
                   </h3>
                   <p className="text-xs text-slate-500 leading-relaxed font-medium line-clamp-3">

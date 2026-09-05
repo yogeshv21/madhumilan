@@ -30,7 +30,7 @@ export default function ProjectsPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-none text-white">
             {content.hero.title}
           </h1>
-          <p className="text-base sm:text-lg text-slate-350 max-w-3xl leading-relaxed mx-auto lg:mx-0">
+          <p className="text-base sm:text-lg text-slate-400 max-w-3xl leading-relaxed mx-auto lg:mx-0">
             {content.hero.description}
           </p>
         </div>

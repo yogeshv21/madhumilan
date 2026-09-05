@@ -18,13 +18,13 @@ export default function WhyChooseUs() {
   return (
     <section className="py-20 lg:py-28 bg-brand-dark text-white relative overflow-hidden">
       {/* Decorative Background Accents */}
-      <div className="absolute top-0 left-0 w-80 h-80 bg-[radial-gradient(circle_at_top_left,#f2641910,transparent)]" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_bottom_right,#13407420,transparent)]" />
+      <div className="absolute top-0 left-0 w-80 h-80 bg-[radial-gradient(circle_at_top_left,#b91c1c10,transparent)]" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-[radial-gradient(circle_at_bottom_right,#991b1b20,transparent)]" />
       
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mb-16 space-y-4">
-          <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
+          <span className="text-xs font-black uppercase tracking-widest text-slate-400">
             {content.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight leading-tight">
@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
                 className="flex flex-col p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 hover:border-brand-orange/20 transition-all duration-300 group"
               >
                 {/* Icon wrapper */}
-                <div className="inline-flex items-center justify-center h-12 w-12 rounded-xl bg-brand-orange/10 text-brand-orange group-hover:bg-brand-orange group-hover:text-white transition-colors mb-5">
+                <div className="inline-flex items-center justify-center h-12 w-12 rounded-xl bg-white/5 text-white/70 group-hover:bg-brand-orange group-hover:text-white transition-colors mb-5">
                   <Icon className="h-5 w-5" />
                 </div>
 

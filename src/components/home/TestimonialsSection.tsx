@@ -13,7 +13,7 @@ export default function TestimonialsSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="max-w-3xl mb-16 space-y-4">
-          <span className="text-xs font-black uppercase tracking-widest text-brand-orange">
+          <span className="text-xs font-black uppercase tracking-widest text-slate-500">
             {content.badge}
           </span>
           <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-brand-blue dark:text-white leading-tight">
@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
                 </p>
               </div>
 
-              <div className="mt-6 pt-5 border-t border-slate-100 dark:border-slate-850 flex items-center gap-3">
+              <div className="mt-6 pt-5 border-t border-slate-100 dark:border-slate-800 flex items-center gap-3">
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-blue text-white font-black text-sm uppercase">
                   {test.name.charAt(0)}
                 </div>
